@@ -62,7 +62,7 @@ Actions
 //			OverrideIn = "<Planets/planets.txt>/Styles"
 //			Overrides
 //			{
-//				asgard = &<../../Mods/aplanetmod/Planets/Asgard.txt>
+//				asgard = &<../../Mods/APlanetaryMod/Planets/Asgard.txt>
 //
 //			}
 //		}//done
@@ -99,7 +99,7 @@ Actions
 //					&<stars.txt>
 //					&<galaxy.txt>
 //
-//					&<../../Mods/aplanetmod/Backgrounds/backgrounds.txt>
+//					&<../../Mods/APlanetaryMod/Backgrounds/backgrounds.txt>
 //				]
 //			}
 //		}
