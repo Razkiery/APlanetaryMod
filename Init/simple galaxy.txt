@@ -72,19 +72,13 @@ Spawners
 	: ~/Star
 	{
 		Count = 1
-		Distance = 0
+		Distance = [20, 1000]
 	}
-
+	
 	: ~/Hole
 	{
-		Count = 1
-		Distance = 0
-	}
-
-	: ~/Star
-	{
-		Count = 1
-		Distance = [20, 1000]
+		Count = 4
+		Distance = [10, 200]
 	}
 ]
 
