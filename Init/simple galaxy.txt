@@ -1,4 +1,4 @@
-HexRadius = 1000
+HexRadius = 500
 
 Spawners
 [
