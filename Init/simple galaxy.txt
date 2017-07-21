@@ -1,7 +1,13 @@
 HexRadius = 500
 
 Spawners
-[
+[	
+	
+	: ~/Hole
+	{
+		Count = 1
+		Distance = 0
+	}	
 	// Gold nebula.
 	{
 		Type = PerlinHexCells
@@ -68,17 +74,17 @@ Spawners
 		HexRadius = &~/HexRadius
 		Styles = ["empty_cell"]
 	}
-
-	: ~/Star
-	{
-		Count = 1
-		Distance = [20, 1000]
-	}
 	
 	: ~/Hole
 	{
-		Count = 4
-		Distance = [10, 200]
+		Count = 1
+		Distance = 0
+	}	
+
+	: ~/Star
+	{
+		Count = [60, 75]
+		Distance = [25, 200]
 	}
 ]
 
@@ -112,23 +118,14 @@ Star : Planet
 
 Hole : Planet
 {
-	MinDistFromOtherObjects = 20
+	MinDistFromOtherObjects = 400
 	Styles = ["hole"]
-	Size = [1.5, 2]
+	Size = [25, 28]
 	IsLightSource = false
 	LightHeight = 3
 
 	SubSpawners
-	[
-		: ~/InnerPlanet
-		{
-			Count = [3, 4]
-		}
-
-		: ~/OuterPlanet
-		{
-			Count = [4, 5]
-		}
+	[	
 	]
 }
 
