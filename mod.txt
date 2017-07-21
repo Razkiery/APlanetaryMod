@@ -23,9 +23,9 @@ Actions
 //		ManyToAdd = &<Init/galaxy map.txt>/Stylesmoons
 //	}
 	{
-		Action = AddMany;
-		AddTo = "<Backgrounds/backgrounds.txt>/Styles"
-		ManyToAdd = &<Init/backgrounds.txt>/Styles
+		Action = Overrides;
+		OverrideIn = "<Backgrounds/backgrounds.txt>"
+		Overrides = &<Init/backgrounds.txt>
 	}
 //	{
 //		Action = Overrides;

@@ -1,0 +1,76 @@
+ID = Stars
+InGameBackground = false
+BaseColor = [0, 0, 0]
+GrayscaleFactor = .75
+
+RegionSize = [20, 20]
+CameraFollowParallax = 1400
+PerspectiveParallax = 2800
+ZoomSizeExponent = .025
+RecenterFactorPerSecond = .025
+
+Material
+{
+	Shader = "../../../Data/Backgrounds/background.shader"
+	_grayscaleFactor = &~/GrayscaleFactor
+}
+
+Objects
+[
+	// Background noise.
+	{
+		Count = [3, 6]
+		TextureFiles
+		[
+			"cloud1.png"
+			"cloud2.png"
+			"cloud3.png"
+			"cloud4.png"
+		]
+		Size
+		{
+			Min = [1, 1,]
+			Max = [3, 3]
+		}
+		Scale = [6, 12]
+		Z = [.75, 1]
+		Rot = [0, 360d]
+		ColorHue = 240
+		ColorSat = 1
+		ColorAlpha = [.05, .1]
+
+		PerlinProbability
+		{
+			GridSize = [10, 10]
+			Octaves = 1
+			OutputScale = 1
+		}
+		PerlinRandExponent = .33
+	}
+
+	// Your basic star.
+	{
+		Count = [400, 600]
+		TextureFiles = ["star.png"]
+		Scale = [.2, .3]
+		Z = [.75, 1]
+		Rot = [0, 360d]
+		ColorHue = 240
+		ColorSat = [0, .5]
+		ColorAlpha = [.5, .75]
+		TwinkleInterval = [1, 3]
+		TwinkleAddColor
+		{
+			Min = [0, 0, 0, 127]
+			Max = [0, 0, 0, 191]
+		}
+
+		PerlinProbability
+		{
+			GridSize = [10, 10]
+			Octaves = 1
+			OutputScale = 1
+		}
+		PerlinRandExponent = .5
+	}
+]
