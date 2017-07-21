@@ -1,0 +1,40 @@
+HexRadius = 600
+Stylesmoons
+[
+	"asgard"
+	"asgard"
+	"asgard"
+	"asgard"
+	"asgard"
+	"asgard"
+]
+Stylesplanets
+[
+	"asgard"
+	"asgard"
+	"asgard"
+	"asgard"
+	"asgard"
+	"asgard"
+]
+CellStyles
+[
+	&<../GalaxyMap/green_cell.txt>
+]
+Spawners
+[
+	// Green nebula.
+	{
+		Type = PerlinHexCells
+		HexRadius = &~/HexRadius
+		Styles = ["green_cell"]
+		NoiseRange = [.65, 2]
+		NoiseFalloff = -1
+		NoiseFalloffRange = [40, 60]
+		PerlinNoise
+		{
+			GridSize = [5, 5]
+			Octaves = 2
+		}
+	}
+]

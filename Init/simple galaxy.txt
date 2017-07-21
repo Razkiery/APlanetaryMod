@@ -1,0 +1,235 @@
+HexRadius = 1000
+
+Spawners
+[
+	// Gold nebula.
+	{
+		Type = PerlinHexCells
+		HexRadius = &~/HexRadius
+		Styles = ["gold_cell"]
+		NoiseRange = [.65, 2]
+		NoiseFalloff = -1
+		NoiseFalloffRange = [190, 210]
+		PerlinNoise
+		{
+			GridSize = [5, 5]
+			Octaves = 2
+		}
+	}
+
+	// Blue nebula.
+	{
+		Type = PerlinHexCells
+		HexRadius = &~/HexRadius
+		Styles = ["blue_cell"]
+		NoiseRange = [0, .3]
+		NoiseFalloff = -1
+		NoiseFalloffRange = [190, 210]
+		PerlinNoise
+		{
+			GridSize = [20, 20]
+			Octaves = 3
+		}
+	}
+
+	// Red nebula.
+	{
+		Type = PerlinHexCells
+		HexRadius = &~/HexRadius
+		Styles = ["red_cell"]
+		NoiseRange = [.4, .8]
+		NoiseFalloff = -1
+		NoiseFalloffRange = [190, 210]
+		PerlinNoise
+		{
+			GridSize = [20, 20]
+			Octaves = 3
+		}
+	}
+
+	// Green nebula.
+	{
+		Type = PerlinHexCells
+		HexRadius = &~/HexRadius
+		Styles = ["green_cell"]
+		NoiseRange = [.65, 2]
+		NoiseFalloff = -1
+		NoiseFalloffRange = [190, 210]
+		PerlinNoise
+		{
+			GridSize = [20, 20]
+			Octaves = 4
+		}
+	}
+
+	// Fill in remaining tiles with empty cells.
+	{
+		Type = HexCells
+		HexRadius = &~/HexRadius
+		Styles = ["empty_cell"]
+	}
+
+	: ~/Star
+	{
+		Count = 1
+		Distance = 0
+	}
+
+	: ~/Hole
+	{
+		Count = 1
+		Distance = 0
+	}
+
+	: ~/Star
+	{
+		Count = 1
+		Distance = [20, 1000]
+	}
+]
+
+Planet
+{
+	Type = Planet
+	NameGenerator = &<../../../Data/Galaxy Map/Name Generators/celestial.txt>/Main
+}
+
+Star : Planet
+{
+	MinDistFromOtherObjects = 20
+	Styles = ["sun"]
+	Size = [1.5, 2]
+	IsLightSource = true
+	LightHeight = 3
+
+	SubSpawners
+	[
+		: ~/InnerPlanet
+		{
+			Count = [3, 4]
+		}
+
+		: ~/OuterPlanet
+		{
+			Count = [4, 5]
+		}
+	]
+}
+
+Hole : Planet
+{
+	MinDistFromOtherObjects = 20
+	Styles = ["hole"]
+	Size = [1.5, 2]
+	IsLightSource = false
+	LightHeight = 3
+
+	SubSpawners
+	[
+		: ~/InnerPlanet
+		{
+			Count = [3, 4]
+		}
+
+		: ~/OuterPlanet
+		{
+			Count = [4, 5]
+		}
+	]
+}
+
+
+InnerPlanet : Planet
+{
+	Distance = [2.5, 5]
+	MinDistFromOtherObjects = 2.5
+	Styles
+	[
+		"terra"
+		"terra"
+		"barren"
+		"barren"
+		"barren"
+		"barren"
+		"alien"
+		"asgard"
+		"asgard"
+		"asgard"
+		"asgard"
+		"asgard"
+		"asgard"
+	]
+	Size = [.4, .6]
+	HasOrbit = true
+
+	SubSpawners
+	[
+		: ~/Moon
+		{
+			Count = [0, 2]
+			Distance = [.75, 1.5]
+		}
+
+		: ~/Node
+		{
+			Count = 1
+			Distance = [.31, .35]
+		}
+	]
+}
+
+OuterPlanet : Planet
+{
+	Distance = [5, 9]
+	MinDistFromOtherObjects = 4
+	Styles = ["gas"]
+	Size = [.8, 1]
+	HasOrbit = true
+
+	SubSpawners
+	[
+		: ~/Moon
+		{
+			Count = [0, 4]
+			Distance = [1, 2]
+		}
+
+		: ~/Node
+		{
+			Count = 1
+			Distance = [.51, .55]
+		}
+	]
+}
+
+Moon : Planet
+{
+	MinDistFromOtherObjects = .75
+	Styles
+	[
+		"rocky"
+		"rocky"
+		"rocky"
+		"lava"
+		"asgard"
+		"asgard"
+	]
+	Size = [.2, .3]
+	HasOrbit = true
+
+	SubSpawners
+	[
+		: ~/Node
+		{
+			Count = 1
+			Distance = [.16, .2]
+		}
+	]
+}
+
+Node
+{
+	Type = "Node"
+	MinDistFromOtherObjects = 0
+	HasOrbit = true// This is required to link nodes with their planets. No orbit will be rendered.
+}

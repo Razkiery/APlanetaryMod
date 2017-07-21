@@ -1,0 +1,115 @@
+Name = "APlanetMod"
+Version = 0.0.0
+Author = "Ryuuro & Bubbet"
+Description = "Overhauls the look of the galaxy.\n\n"\
+              "<red></red>"
+
+StringsFolder = Strings
+Actions
+[
+	{
+		Action = Overrides;
+		OverrideIn = "<Planets/planets.txt>/Styles"
+		Overrides = &<Init/planets.txt>/Styles
+	}
+//	{// Any of the AddMany should be replacable with Overrides. Though I haven't tried.
+//		Action = AddMany;
+//		AddTo = "<Galaxy Map/Map Generators/simple galaxy.txt>/InnerPlanet/Styles"
+//		ManyToAdd = &<Init/galaxy map.txt>/Stylesplanets
+//	}
+//	{
+//		Action = AddMany;
+//		AddTo = "<Galaxy Map/Map Generators/simple galaxy.txt>/Moon/Styles"
+//		ManyToAdd = &<Init/galaxy map.txt>/Stylesmoons
+//	}
+	{
+		Action = AddMany;
+		AddTo = "<Backgrounds/backgrounds.txt>/Styles"
+		ManyToAdd = &<Init/backgrounds.txt>/Styles
+	}
+//	{
+//		Action = Overrides;
+//		OverrideIn = "<Galaxy Map/Map Generators/simple galaxy.txt>/Spawners"
+//		Overrides = &<Init/galaxy map.txt>/Spawners
+//	}
+	{
+		Action = Overrides;
+		OverrideIn = "<Galaxy Map/Map Generators/simple galaxy.txt>"
+		Overrides = &<Init/simple galaxy.txt>
+	}
+	{
+		Action = AddMany;
+		AddTo = "<Galaxy Map/galaxy map.txt>/CellStyles"
+		ManyToAdd = &<Init/galaxy map.txt>/CellStyles
+	}
+
+	{
+		Action = Overrides
+		OverrideIn = "<Galaxy Map/galaxy map.txt>/Camera"
+		Overrides
+		{
+			MinScale = .25
+			MaxScale = 45
+		}
+	}
+]
+
+
+//	Actions
+//	[	
+//		{
+//			Action = Overrides
+//			OverrideIn = "<Planets/planets.txt>/Styles"
+//			Overrides
+//			{
+//				asgard = &<../../Mods/aplanetmod/Planets/Asgard.txt>
+//
+//			}
+//		}//done
+//		
+//		{
+//			Action = Overrides
+//			OverrideIn = "<Galaxy Map/Map Generators/simple galaxy.txt>/InnerPlanet/"
+//			Overrides
+//			{
+//				Styles
+//				[
+//				//	"terra"
+//				//	"terra"
+//				//	"barren"
+//				//	"barren"
+//				//	"barren"
+//				//	"barren"
+//				//	"alien"
+//					"asgard"
+//				]
+//			}
+//		}
+//			
+//		{
+//			Action = Overrides
+//			OverrideIn = "<Backgrounds/backgrounds.txt>"
+//			Overrides
+//			{
+//				Styles
+//				[
+//					&<blue.txt>
+//					&<red.txt>
+//					&<gold.txt>
+//					&<stars.txt>
+//					&<galaxy.txt>
+//
+//					&<../../Mods/aplanetmod/Backgrounds/backgrounds.txt>
+//				]
+//			}
+//		}
+//		
+//		{
+//			Action = Overrides
+//			OverrideIn = "<Strings/en.txt>/Planets"
+//			Overrides
+//			{
+//				asgard = "Asgardian"
+//			}
+//		}
+//	]

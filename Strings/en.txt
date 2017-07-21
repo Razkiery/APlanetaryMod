@@ -1,0 +1,5 @@
+Planets
+{
+		asgard = "Asgardian"
+		hole = "Black Hole"
+}
