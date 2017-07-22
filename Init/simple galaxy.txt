@@ -7,22 +7,22 @@ Spawners
 	{
 		Count = 1
 		Distance = 0
-	}	
+	}
 	
 	//Keeping the nebulas away from the black hole
 	{
 		Type = PerlinHexCells
-		HexRadius = 30
+		HexRadius = &~/HexRadius
 		Styles = ["empty_cell2"]
-		NoiseRange = [0, 10]
+		NoiseRange = [0, .3]
 		NoiseFalloff = -1
-		NoiseFalloffRange = [20, 25] //[190, 210]
+		NoiseFalloffRange = 30
 		PerlinNoise
 		{
-			GridSize = [100, 100]
-			Octaves = 1
+			GridSize = [0, 0]
+			Octaves = 0
 		}
-	}
+	}	
 
 	// Gold nebula.
 	{
@@ -83,7 +83,7 @@ Spawners
 			Octaves = 4
 		}
 	}
-
+	
 	// Fill in remaining tiles with empty cells.
 	{
 		Type = HexCells
