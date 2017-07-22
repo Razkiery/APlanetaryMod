@@ -19,7 +19,7 @@ Spawners
 		NoiseFalloffRange = [1, 2]
 		PerlinNoise
 		{
-			GridSize = [0.1, 0.1]
+			GridSize = [20, 20]
 			Octaves = 0.1
 		}
 	}
