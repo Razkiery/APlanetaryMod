@@ -20,6 +20,7 @@ Stylesplanets
 CellStyles
 [
 	&<../GalaxyMap/green_cell.txt>
+	&<../GalaxyMap/empty_cell2.txt>
 ]
 Spawners
 [

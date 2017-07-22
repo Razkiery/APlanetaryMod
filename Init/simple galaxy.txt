@@ -11,16 +11,16 @@ Spawners
 	
 	//Keeping the nebulas away from the black hole
 	{
-		Type = HexCells
+		Type = PerlinHexCells
 		HexRadius = 30
-		Styles = ["empty_cell"]
-		NoiseRange = [0.02, 0.03]
-		NoiseFalloff = -100
-		NoiseFalloffRange = [1, 2]
+		Styles = ["empty_cell2"]
+		NoiseRange = [0, 10]
+		NoiseFalloff = -1
+		NoiseFalloffRange = [20, 25] //[190, 210]
 		PerlinNoise
 		{
-			GridSize = [20, 20]
-			Octaves = 0.1
+			GridSize = [100, 100]
+			Octaves = 1
 		}
 	}
 
@@ -44,13 +44,13 @@ Spawners
 		Type = PerlinHexCells
 		HexRadius = &~/HexRadius
 		Styles = ["blue_cell"]
-		NoiseRange = [0, .3]
-		NoiseFalloff = -1
-		NoiseFalloffRange = [190, 210] //[190, 210]
+		NoiseRange = [0, 0.3] //[0, .3] //changes how thick the lines are
+		NoiseFalloff = -1 //-1 // can only be -1 or less, otherwise itll do weird things stretching out to the edge
+		NoiseFalloffRange = [190, 210] //[190, 210] //Circular boarder from center on which it stops appearing generally.
 		PerlinNoise
 		{
-			GridSize = [20, 20]
-			Octaves = 3
+			GridSize = [20, 20] //[20, 20] // smaller numbers make it more stringy instead of clumped together
+			Octaves = 3 //3 // lower numbers make it much less random, like less seeds were planted, and more of it is connected together.
 		}
 	}
 
