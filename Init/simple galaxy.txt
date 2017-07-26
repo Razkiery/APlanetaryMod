@@ -1,4 +1,4 @@
-HexRadius = 500
+HexRadius = 300
 
 Spawners
 [	
@@ -13,10 +13,10 @@ Spawners
 	{
 		Type = PerlinHexCells
 		HexRadius = &~/HexRadius
-		Styles = ["empty_cell2"]
-		NoiseRange = [0, .3]
+		Styles = ["empty_cell"]
+		NoiseRange = [0, .0001]
 		NoiseFalloff = -1
-		NoiseFalloffRange = 30
+		NoiseFalloffRange = [25, 35]
 		PerlinNoise
 		{
 			GridSize = [0, 0]

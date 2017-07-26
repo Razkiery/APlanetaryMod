@@ -1,0 +1,7 @@
+ID = empty_cell
+SimBackgroundID = Stars
+
+Objects
+[
+	// None.
+]

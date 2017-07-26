@@ -38,20 +38,20 @@ Actions
 		Overrides = &<Init/simple galaxy.txt>
 	}
 	{
-		Action = AddMany;
-		AddTo = "<Galaxy Map/galaxy map.txt>/CellStyles"
-		ManyToAdd = &<Init/galaxy map.txt>/CellStyles
+		Action = Overrides;
+		OverrideIn = "<Galaxy Map/galaxy map.txt>"
+		Overrides = &<Init/galaxy map.txt>
 	}
 
-	{
-		Action = Overrides
-		OverrideIn = "<Galaxy Map/galaxy map.txt>/Camera"
-		Overrides
-		{
-			MinScale = .25
-			MaxScale = 45
-		}
-	}
+//	{
+//		Action = Overrides
+//		OverrideIn = "<Galaxy Map/galaxy map.txt>/Camera"
+//		Overrides
+//		{
+//			MinScale = .25
+//			MaxScale = 45
+//		}
+//	}
 ]
 
 

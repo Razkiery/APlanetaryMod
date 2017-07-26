@@ -36,8 +36,8 @@ Objects
 		Z = [.75, 1]
 		Rot = [0, 360d]
 		ColorHue = 240
-		ColorSat = 1
-		ColorAlpha = [.025, .05]
+		ColorSat = 0.1
+		ColorAlpha = [.005, .015]
 
 		PerlinProbability
 		{
@@ -56,13 +56,13 @@ Objects
 		Z = [.5, 1]
 		Rot = [0, 360d]
 		ColorHue = 240
-		ColorSat = [0, .75]
+		ColorSat = [0, 0]
 		ColorAlpha = [.1, .35]
 		TwinkleInterval = [1, 3]
 		TwinkleAddColor
 		{
-			Min = [0, 0, 0, 63]
-			Max = [0, 0, 0, 127]
+			Min = [0, 0, 0, 127]
+			Max = [0, 0, 0, 200]
 		}
 
 		PerlinProbability

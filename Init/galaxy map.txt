@@ -1,41 +1,127 @@
-HexRadius = 600
-Stylesmoons
-[
-	"asgard"
-	"asgard"
-	"asgard"
-	"asgard"
-	"asgard"
-	"asgard"
-]
-Stylesplanets
-[
-	"asgard"
-	"asgard"
-	"asgard"
-	"asgard"
-	"asgard"
-	"asgard"
-]
+BackgroundStyleID = "Galaxy"
+TargetNodeFocusSpeed = 10
+PlanetPixelSize = [128, 128]
+
+NodeSprite
+{
+	Texture = "../../../Data/Galaxy Map/map node.png"
+	Size = [.4, .4]
+}
+NodeSpriteNormalColor = [0, 255, 84, 255]
+NodeSpriteHighlightedColor = [0, 255, 84, 382]
+NodeSpritePressedColor = [0, 255, 84, 512]
+UnscaledNodeWorldSize = [.4, .4]
+NodeSpriteVisitedColorFactor = [127, 127, 127]
+MaxNodeScale = 1
+NodeSpriteRotSpeed = 30d
+
+CurNodeSprite
+{
+	Texture = "../../../Data/Galaxy Map/cur map node.png"
+}
+UnscaledCurNodeWorldSize = [.8, .8]
+CurNodePulseInterval = 1
+CurNodeBeginScale = 1
+CurNodeEndScale = 1.25
+CurNodeBeginColor = [255, 255, 255, 255]
+CurNodeEndColor = [255, 255, 255, 217]
+
+DestNodeSprite
+{
+	Texture = "../../../Data/Galaxy Map/cur map node.png"
+}
+UnscaledDestNodeWorldSize = [.8, .8]
+DestNodePulseInterval = 1
+DestNodeBeginScale = 1
+DestNodeEndScale = 1
+DestNodeBeginColor = [0, 255, 255, 255]
+DestNodeEndColor = [0, 255, 255, 217]
+DestNodeFromTime = .9
+DestNodeFromColor = [255, 255, 255, 255]
+DestNodeFromScale = 3
+DestNodeFromRot = 360d
+
+PlanetNameFontStyle = [Regular]
+PlanetNameFontColor = [196, 255, 255, 205]
+PlanetNameFontSize = 18
+PlanetNameWorldOffset = [.2, -.2]
+PlanetNameHAlignment = Left
+PlanetNameVAlignment = Bottom
+PlanetNameShowDist = .25
+PlanetNameFadeInTime = .25
+PlanetNameFadeOutTime = .25
+PlanetNameLineColor = &PlanetNameFontColor
+PlanetNameUnderlineColor = &PlanetNameLineColor
+
+CourseLine
+{
+	Sprite
+	{
+		Texture = "../../../Data/Galaxy Map/warp line.png"
+		VertexColor = [255, 255, 255, 229]
+	}
+	Thickness = .15
+	CapBeginPixels = 16
+	CapEndPixels = 16
+}
+CourseLinePulseInterval = 1
+CourseLinePulseColorFactor = [255, 255, 255, 204]
+
+Camera
+{
+	PixelOrthographicFactor = 0.0078125// 1/128
+	DefaultScale = 1
+	MinScale = .25
+	MaxScale = 45
+	MousePanBorderThickness = 4
+	MouseWheelZoomSpeed = 10
+	BorderClampPanSpeed = 10
+	FollowFactor = .9999
+
+	ZoomClickSound
+	{
+		Sound = "../../../Data/Gui/zoom_click.wav"
+		Volume = .125
+		Speed = 1
+	}
+}
+
 CellStyles
 [
+	&<../GalaxyMap/empty_cell.txt>
+	&<../GalaxyMap/blue_cell.txt>
+	&<../GalaxyMap/red_cell.txt>
+	&<../GalaxyMap/gold_cell.txt>
 	&<../GalaxyMap/green_cell.txt>
-	&<../GalaxyMap/empty_cell2.txt>
 ]
-Spawners
-[
-	// Green nebula.
-	{
-		Type = PerlinHexCells
-		HexRadius = &~/HexRadius
-		Styles = ["green_cell"]
-		NoiseRange = [.65, 2]
-		NoiseFalloff = -1
-		NoiseFalloffRange = [40, 60]
-		PerlinNoise
-		{
-			GridSize = [5, 5]
-			Octaves = 2
-		}
-	}
-]
+
+CellStylesMaterial
+{
+	Shader = "../../../Data/Backgrounds/background.shader"
+}
+
+CellStylesAtlasParams
+{
+	SampleMode = Linear
+	MipLevels = 6// Assumes 32x32 min sprite size.
+}
+
+PlanetOrbitCircle
+{
+	Texture = "../../../Data/Gui/selection gradient.png"
+	VertexColor = [255, 255, 255, 63]
+	Thickness = .05
+	QuadCount = 256
+}
+
+FlyOutLineColor = [0, 255, 84, 178]
+
+NodeHighlightSound
+{
+	Sound = "../../../Data/Gui/hover.wav"
+	Volume = .05
+}
+NodePressedSound
+{
+	Sound = "../../../Data/Gui/press.wav"
+}

@@ -1,0 +1,30 @@
+ID = red_cell
+SimBackgroundID = Red
+
+Objects
+[
+	// Blue nebula.
+	{
+		Count = [3, 4]
+		MaxDistFromCenter = .2
+		TextureFiles
+		[
+			"../Backgrounds/cloud1.png"
+			"../Backgrounds/cloud2.png"
+			"../Backgrounds/cloud3.png"
+			"../Backgrounds/cloud4.png"
+		]
+		Size
+		{
+			Min = [1.5, 1.5]
+			Max = [2, 2]
+		}
+		Scale = [.75, 1]
+		Rot = [0, 360d]
+		RotSpeed= [-10d, 10d]
+		ColorHue = 0
+		ColorSat = [.75, 1]
+		ColorVal = [.5, 1]
+		ColorAlpha = [.075, .25]//[.125, .25]
+	}
+]

@@ -114,7 +114,7 @@ Layers
 	}
 	{
 		Type = Halo
-		OuterThickness = 0.25
+		OuterThickness = 0.2
 		InnerThickness = 0.01
 		PerlinNoise
 		{
@@ -143,30 +143,30 @@ Layers
 					Pos = -1
 					Color
 					{
-						R = 0
-						G = 0
-						B = 0
-						A = 255
+						R = 255
+						G = 255
+						B = 255
+						A = 200
 					}
 				}
 				{
 					Pos = -0.5
 					Color
 					{
-						R = 0
-						G = 0
-						B = 0
-						A = 255
+						R = 230
+						G = 230
+						B = 230
+						A = 175
 					}
 				}
 				{
 					Pos = 0
 					Color
 					{
-						R = 0
-						G = 0
-						B = 0
-						A = 255
+						R = 230
+						G = 230
+						B = 230
+						A = 100
 					}
 				}
 				{
@@ -176,7 +176,7 @@ Layers
 						R = 0
 						G = 0
 						B = 0
-						A = 255
+						A = 0
 					}
 				}
 				{
@@ -186,6 +186,77 @@ Layers
 						R = 0
 						G = 0
 						B = 0
+						A = 0
+					}
+				}
+			]
+		}
+		ColorScale
+		{
+			R = 255
+			G = 255
+			B = 255
+			A = 255
+		}
+		HueVariance
+		{
+			Min = -20
+			Max = 20
+		}
+		SaturationVariance
+		{
+			Min = -0.5
+			Max = 0
+		}
+		ValueVariance
+		{
+			Min = 0
+			Max = 0
+		}
+		AlphaVariance
+		{
+			Min = 0
+			Max = 0
+		}
+		AnimateSpeed = 0.05
+		Darkness = 0
+		Enabled = true
+		RadiusScale = 0.9
+	}
+	{
+		Type = Halo
+		OuterThickness = 0.05
+		InnerThickness = 0.005
+		PerlinNoise
+		{
+			Seed = 0
+			GridSize
+			{
+				X = 0.25
+				Y = 0.25
+			}
+			RepeatX = 4
+			RepeatY = 4
+			Octaves = 1
+			Persistence = 0.5
+			OutputScale = 1
+			ClampOutput
+			{
+				Min = 0
+				Max = 0
+			}
+		}
+		ColorRamp
+		{
+			Colors
+			[
+				{
+					Pos = 0
+					Color
+					{
+						R = 255
+						G = 255
+						B = 255
 						A = 255
 					}
 				}
@@ -221,6 +292,6 @@ Layers
 		AnimateSpeed = 0.05
 		Darkness = 0
 		Enabled = true
-		RadiusScale = 1
+		RadiusScale = 0.75
 	}
 ]
