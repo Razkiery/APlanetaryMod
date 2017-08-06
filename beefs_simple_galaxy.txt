@@ -1,0 +1,406 @@
+HexRadius = 700;
+
+Spawners
+[
+	// Gold nebula.
+	{
+		Type = PerlinHexCells;
+		HexRadius = &~/HexRadius;
+		Styles = ["gold_cell"];
+		NoiseRange = [.65, 2];
+		NoiseFalloff = -1;
+		NoiseFalloffRange = [50, 600];
+		PerlinNoise
+		{
+			GridSize = [5, 5];
+			Octaves = 20;
+		}
+	}
+
+	// UNUSED DO NOT TOUCH
+	{
+		Type = PerlinHexCells;
+		HexRadius = &~/HexRadius;
+		Styles = ["gold_cell"];
+		NoiseRange = [.1 , .6];
+		NoiseFalloff = -1;
+		NoiseFalloffRange = [0, 40];
+		PerlinNoise
+		{
+			GridSize = [20, 20];
+			Octaves = 20;
+	}
+	}
+	// Blue nebula.
+	{
+		Type = PerlinHexCells;
+		HexRadius = &~/HexRadius;
+		Styles = ["blue_cell"];
+		NoiseRange = [0, .6];
+		NoiseFalloff = -1;
+		NoiseFalloffRange = [50, 600];
+		PerlinNoise
+		{
+			GridSize = [20, 20];
+			Octaves = 20;
+		}
+	}
+
+	// Red nebula.
+	{
+		Type = PerlinHexCells;
+		HexRadius = &~/HexRadius;
+		Styles = ["red_cell"];
+		NoiseRange = [.4, .8];
+		NoiseFalloff = -1;
+		NoiseFalloffRange = [50, 600];
+		PerlinNoise
+		{
+			GridSize = [20, 20];
+			Octaves = 20;
+		}
+	}
+
+	// Fill in remaining tiles with empty cells.
+	{
+		Type = HexCells;
+		HexRadius = &~/HexRadius;
+		Styles = ["empty_cell"];
+	}
+	//This is the galactic core, please do not change the Count
+	: ~/Core
+	{
+		Count = 1;
+		Distance = 0;
+	}
+	//These are the bachground stars, they populate the inner galaxy
+	: ~/BStar
+	{
+		Count = [50, 75];
+		Distance = [100, 375];
+	}
+	//These are your traditional solar systems, these are the only systems that can have terra planets
+	: ~/Star
+	{
+		Count = [15, 40];
+		Distance = [300, 575];
+	}
+	//These are rogue planets, planets without a star, they get light from the galactic core
+	: ~/RoguePlanet
+	{
+		Count = [15, 30];
+		Distance = [400, 600];
+	}
+	//This is a system of moons orbiting a gas giant
+		: ~/FailedSystem
+	{
+		Count = [5, 10];
+		Distance = [60, 600];
+	}
+	//This is a gas giant
+		: ~/GStar
+	{
+		Count = [1, 3];
+		Distance = [300, 500];
+	}
+	
+
+	
+]
+
+Planet
+{
+	Type = Planet;
+	NameGenerator = &<../Name Generators/celestial.txt>/Main;
+}
+//This is an explanation of how the code works using the galactic core
+Core : Planet
+{
+	MinDistFromOtherObjects = 1; //How far away other things can spawn
+	Styles = ["sun"]; //The skin the planet uses
+	Size = 40; //How large it is
+	IsLightSource = false; //Creates light if true
+	LightHeight = 0; //How much light?
+	
+		SubSpawners //Can it spawn planetoids?
+	[
+		: ~/CoreNoid
+		{
+			Count = [10, 20]; //Lower and Upper range for number of moons spawned
+			Distance = [20, 45]; // Lower and Upper range for distance of moons
+		}
+		
+
+	]
+
+}
+
+
+
+FailedSystem : Planet
+{
+	MinDistFromOtherObjects = 50;
+	Styles = ["gas"];
+	Size = [1, 2];
+	IsLightSource = true;
+	LightHeight = 1;
+
+	SubSpawners
+	[
+		: ~/Moon
+		{
+			Count = [6, 12];
+			Distance = [4, 9];
+		}
+
+	]
+}
+
+RoguePlanet : Planet
+{
+	MinDistFromOtherObjects = 20;
+	Styles = ["barren"];
+	Size = [.4, .6];
+
+	SubSpawners
+	[
+		: ~/CapRoid
+		{
+			Count = [0, 2];
+			Distance = [1, 2];
+		}
+
+		: ~/Node
+		{
+			Count = 1;
+			Distance = [.31, .35];
+		}
+	]	
+
+}
+
+BStar : Planet
+{
+	MinDistFromOtherObjects = 4;
+	Styles = ["sun"];
+	Size = 2;
+	IsLightSource = true;
+	LightHeight = 3;
+	HasOrbit = false;
+
+}
+
+GStar : Planet
+{
+	MinDistFromOtherObjects = 10;
+	Styles = ["sun"];
+	Size = [4, 5];
+	IsLightSource = true;
+	LightHeight = 10;
+	HasOrbit = false;
+	
+	SubSpawners
+	[
+	
+			: ~/CapRoid
+		{
+			Count = [10, 20];
+			Distance = [7, 10];
+		}
+		
+				: ~/RimPlanet
+		{
+			Count = [1, 5];
+			Distance = [10, 15];
+		}
+		
+	
+	]
+}
+
+
+Star : Planet
+{
+	MinDistFromOtherObjects = 50;
+	Styles = ["sun"];
+	Size = [2, 3];
+	IsLightSource = true;
+	LightHeight = 3;
+	HasOrbit = false;
+	
+	SubSpawners
+	[
+		: ~/InnerPlanet
+		{
+			Count = [2, 5];
+		}
+		
+		: ~/OuterPlanet
+		{
+			Count = [1, 3];
+		}
+		
+		: ~/RimPlanet
+		{
+			Count = [0, 2];
+		}
+		
+		: ~/CapRoid
+		{
+			Count = [5, 15];
+			Distance = [16, 20];
+		}
+	]
+
+}
+
+InnerPlanet : Planet
+{
+	Distance = [3.5, 9];
+	MinDistFromOtherObjects = 2.5;
+	Styles
+	[
+
+		"barren",
+		"barren",
+		"barren",
+		"terra",
+	]
+	Size = [.3, .4];
+	HasOrbit = true;
+
+	SubSpawners
+	[
+
+		: ~/Moon
+		{
+			Count = [0, 1];
+			Distance = [.5, 1];
+		}
+	
+		: ~/Node
+		{
+			Count = 1;
+			Distance = [.21, .25];
+		}
+	]
+}
+
+
+OuterPlanet : Planet
+{
+	Distance = [9, 11];
+	MinDistFromOtherObjects = 4;
+	Styles = ["gas"];
+	Size = [.8, 1];
+	HasOrbit = true;
+
+	SubSpawners
+	[
+		: ~/Moon
+		{
+			Count = [0, 4];
+			Distance = [1, 2];
+		}
+
+		: ~/Node
+		{
+			Count = 1;
+			Distance = [.51, .55];
+		}
+	]
+}
+
+RimPlanet : Planet
+{
+	Distance = [12, 15];
+	MinDistFromOtherObjects = 4;
+	Styles = ["alien"];
+	Size = [.2, .4];
+	HasOrbit = true;
+
+	SubSpawners
+	[
+		: ~/CapRoid
+		{
+			Count = [0, 1];
+			Distance = [.8, 1];
+		}
+
+		: ~/Node
+		{
+			Count = 1;
+			Distance = [.21, .25];
+		}
+	]
+}
+
+Moon : Planet
+{
+	MinDistFromOtherObjects = .75;
+	Styles
+	[
+		"rocky",
+		"rocky",
+		"rocky",
+		"lava",
+	]
+	Size = [.2, .3];
+	HasOrbit = true;
+
+	SubSpawners
+	[
+		: ~/Node
+		{
+			Count = 1;
+			Distance = [.16, .2];
+		}
+	]
+}
+
+CapRoid : Planet
+{
+	MinDistFromOtherObjects = .75;
+	Styles
+	[
+		"rocky",
+	]
+	Size = [.10, .15];
+	HasOrbit = true;
+
+	SubSpawners
+	[
+		: ~/Node
+		{
+			Count = 1;
+			Distance = [.16, .2];
+		}
+	]
+}
+
+CoreNoid : Planet
+{
+	MinDistFromOtherObjects = .75;
+	Styles
+	[
+		"rocky",
+	]
+	Size = [.2, .3];
+	HasOrbit = true;
+
+	SubSpawners
+	[
+		: ~/Node
+		{
+			Count = 1;
+			Distance = [.16, .2];
+		}
+	]
+}
+
+Node
+{
+	Type = "Node";
+	MinDistFromOtherObjects = 0;
+	HasOrbit = true; // This is required to link nodes with their planets. No orbit will be rendered.
+}
