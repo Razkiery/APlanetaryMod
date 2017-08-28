@@ -97,7 +97,13 @@ Spawners
 		Distance = 0
 	}	
 
-	: ~/Star
+//	: ~/Star
+//	{
+//		Count = [60, 75]
+//		Distance = [50, 200]
+//	}
+
+	: ~/StarD
 	{
 		Count = [60, 75]
 		Distance = [50, 200]
@@ -131,6 +137,29 @@ Star : Planet
 		}
 	]
 }
+
+StarD : Planet
+{
+	MinDistFromOtherObjects = 20
+	Styles = ["quasar"]
+	Size = [1.5, 2]
+	IsLightSource = true
+	LightHeight = 3
+
+	SubSpawners
+	[
+		: ~/InnerPlanet
+		{
+			Count = [3, 4]
+		}
+
+		: ~/OuterPlanet
+		{
+			Count = [4, 5]
+		}
+	]
+}
+
 
 Hole : Planet
 {

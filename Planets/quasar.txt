@@ -1,0 +1,226 @@
+NameKey = "Planets/Sun"
+RotSpeed
+{
+	Min = -0.025
+	Max = 0.025
+}
+Layers
+[
+	{
+		Type = Perlin
+		PerlinNoise
+		{
+			Seed = 0
+			GridSize
+			{
+				X = 0.125
+				Y = 50.125
+			}
+			RepeatX = 16
+			RepeatY = 0
+			Octaves = 5
+			Persistence = 0.5
+			OutputScale = 1
+			ClampOutput
+			{
+				Min = -1
+				Max = 1
+			}
+		}
+		PoleEffect = 0
+		PoleEffectLatitudeExponent = 1
+		ColorRamp
+		{
+			Colors
+			[
+				{
+					Pos = -1
+					Color
+					{
+						R = 255
+						G = 255
+						B = 82
+						A = 255
+					}
+				}
+				{
+					Pos = 1
+					Color
+					{
+						R = 255
+						G = 180
+						B = 0
+						A = 255
+					}
+				}
+			]
+		}
+		UseLatitudeRamp = false
+		LatitudeRampExponent = 1
+		LatitudeColorRamp
+		{
+			Colors
+			[
+				{
+					Pos = -1
+					Color
+					{
+						R = 0
+						G = 0
+						B = 255
+						A = 255
+					}
+				}
+				{
+					Pos = 1
+					Color
+					{
+						R = 0
+						G = 255
+						B = 0
+						A = 255
+					}
+				}
+			]
+		}
+		HueVariance
+		{
+			Min = -20
+			Max = 20
+		}
+		SaturationVariance
+		{
+			Min = -0.5
+			Max = 0
+		}
+		ValueVariance
+		{
+			Min = 0
+			Max = 0
+		}
+		AlphaVariance
+		{
+			Min = 0
+			Max = 0
+		}
+		LayerRotSpeed
+		{
+			Min = 0
+			Max = 0
+		}
+		Darkness = 0
+		Enabled = true
+		RadiusScale = 0.75
+	}
+	{
+		Type = Halo
+		OuterThickness = 0.25
+		InnerThickness = 0.01
+		PerlinNoise
+		{
+			Seed = 0
+			GridSize
+			{
+				X = 10.25
+				Y = 0.25
+			}
+			RepeatX = 4
+			RepeatY = 4
+			Octaves = 5
+			Persistence = 0.5
+			OutputScale = 5
+			ClampOutput
+			{
+				Min = -10
+				Max = 10
+			}
+		}
+		ColorRamp
+		{
+			Colors
+			[
+				{
+					Pos = -1
+					Color
+					{
+						R = 255
+						G = 0
+						B = 0
+						A = 63
+					}
+				}
+				{
+					Pos = -0.5
+					Color
+					{
+						R = 255
+						G = 64
+						B = 0
+						A = 127
+					}
+				}
+				{
+					Pos = 0
+					Color
+					{
+						R = 255
+						G = 127
+						B = 0
+						A = 255
+					}
+				}
+				{
+					Pos = 0.5
+					Color
+					{
+						R = 255
+						G = 192
+						B = 0
+						A = 127
+					}
+				}
+				{
+					Pos = 1
+					Color
+					{
+						R = 255
+						G = 255
+						B = 0
+						A = 63
+					}
+				}
+			]
+		}
+		ColorScale
+		{
+			R = 255
+			G = 255
+			B = 255
+			A = 255
+		}
+		HueVariance
+		{
+			Min = -20
+			Max = 20
+		}
+		SaturationVariance
+		{
+			Min = -0.5
+			Max = 0
+		}
+		ValueVariance
+		{
+			Min = 0
+			Max = 0
+		}
+		AlphaVariance
+		{
+			Min = 0
+			Max = 0
+		}
+		AnimateSpeed = 0.05
+		Darkness = 0
+		Enabled = true
+		RadiusScale = 1
+	}
+]
