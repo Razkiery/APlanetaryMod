@@ -73,4 +73,54 @@ Objects
 		}
 		PerlinRandExponent = .5
 	}
+	// Your basic star2.
+	{
+		Count = 1200
+		TextureFiles = ["star2.png"]
+		Scale = [.1, .2]
+		Z = [.5, 1]
+		Rot = [0, 360d]
+		ColorHue = [170, 360]
+		ColorSat = [0, 0.5]
+		ColorAlpha = [.1, .55]
+		TwinkleInterval = [1, 3]
+		TwinkleAddColor
+		{
+			Min = [0, 0, 0, 127]
+			Max = [0, 0, 0, 230]
+		}
+
+		PerlinProbability
+		{
+			GridSize = [5, 5]
+			Octaves = 1
+			OutputScale = 1
+		}
+		PerlinRandExponent = .5
+	}
+	// Your basic quasar.
+	{
+		Count = 5
+		TextureFiles = ["quasar.png"]
+		Scale = [.25, .5]
+		Z = [.5, 1]
+		Rot = [0, 360d]
+		ColorHue = 240
+		ColorSat = [0, 0]
+		ColorAlpha = .9
+		TwinkleInterval = [1, 3]
+		TwinkleAddColor
+		{
+			Min = [0, 0, 0, 190]
+			Max = [0, 0, 0, 200]
+		}
+
+		PerlinProbability
+		{
+			GridSize = [5, 5]
+			Octaves = 1
+			OutputScale = 1
+		}
+		PerlinRandExponent = .5
+	}
 ]
