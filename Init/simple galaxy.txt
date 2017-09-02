@@ -97,17 +97,17 @@ Spawners
 		Distance = 0
 	}	
 
-//	: ~/Star
-//	{
-//		Count = [60, 75]
-//		Distance = [50, 200]
-//	}
-
-	: ~/StarD
+	: ~/Star
 	{
 		Count = [60, 75]
 		Distance = [50, 200]
 	}
+
+//	: ~/StarD
+//	{
+//		Count = [60, 75]
+//		Distance = [50, 200]
+//	}
 ]
 
 Planet
