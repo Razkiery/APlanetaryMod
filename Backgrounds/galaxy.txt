@@ -52,7 +52,7 @@ Objects
 	{
 		Count = 1200
 		TextureFiles = ["star.png"]
-		Scale = [.1, .2]
+		Scale = [.05, .25]
 		Z = [.5, 1]
 		Rot = [0, 360d]
 		ColorHue = 240
@@ -77,7 +77,7 @@ Objects
 	{
 		Count = 1200
 		TextureFiles = ["star2.png"]
-		Scale = [.1, .2]
+		Scale = [.05, .25]
 		Z = [.5, 1]
 		Rot = [0, 360d]
 		ColorHue = [170, 360]
@@ -102,7 +102,7 @@ Objects
 	{
 		Count = 5
 		TextureFiles = ["quasar.png"]
-		Scale = [.25, .5]
+		Scale = [.4, .6]
 		Z = [.5, 1]
 		Rot = [0, 360d]
 		ColorHue = 240

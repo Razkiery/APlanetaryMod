@@ -25,6 +25,6 @@ Objects
 		ColorHue = 0
 		ColorSat = [.75, 1]
 		ColorVal = [.5, 1]
-		ColorAlpha = [.075, .25]//[.125, .25]
+		ColorAlpha = [0.9, 1]//[.075, .25]//[.125, .25]
 	}
 ]
