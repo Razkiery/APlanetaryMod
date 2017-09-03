@@ -22,7 +22,7 @@ Objects
 		Scale = [.75, 1]
 		Rot = [0, 360d]
 		RotSpeed= [-10d, 10d]
-		ColorHue = [220, 240]//240
+		ColorHue = [220, 260]//240
 		ColorSat = [.75, 1]
 		ColorVal = [.5, 1]
 		ColorAlpha = [0.9, 1]
