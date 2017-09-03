@@ -1,4 +1,4 @@
-HexRadius = 300
+HexRadius = 250
 
 Spawners
 [	
@@ -31,7 +31,7 @@ Spawners
 		Styles = ["gold_cell"]
 		NoiseRange = [.65, 2]
 		NoiseFalloff = -1
-		NoiseFalloffRange = [190, 210]
+		NoiseFalloffRange = [150, 190]//[190, 210]
 		PerlinNoise
 		{
 			GridSize = [5, 5]
@@ -46,7 +46,7 @@ Spawners
 		Styles = ["blue_cell"]
 		NoiseRange = [0, 0.3] //[0, .3] //changes how thick the lines are
 		NoiseFalloff = -1 //-1 // can only be -1 or less, otherwise itll do weird things stretching out to the edge
-		NoiseFalloffRange = [190, 210] //[190, 210] //Circular boarder from center on which it stops appearing generally.
+		NoiseFalloffRange = [150, 190]//[190, 210] //[190, 210] //Circular boarder from center on which it stops appearing generally.
 		PerlinNoise
 		{
 			GridSize = [20, 20] //[20, 20] // smaller numbers make it more stringy instead of clumped together
@@ -61,7 +61,7 @@ Spawners
 		Styles = ["red_cell"]
 		NoiseRange = [.4, .8]
 		NoiseFalloff = -1
-		NoiseFalloffRange = [190, 210]
+		NoiseFalloffRange = [150, 190]//[190, 210]
 		PerlinNoise
 		{
 			GridSize = [20, 20]
@@ -76,7 +76,7 @@ Spawners
 		Styles = ["green_cell"]
 		NoiseRange = [.65, 2]
 		NoiseFalloff = -1
-		NoiseFalloffRange = [190, 210]
+		NoiseFalloffRange = [150, 190]//[190, 210]
 		PerlinNoise
 		{
 			GridSize = [20, 20]
@@ -99,14 +99,14 @@ Spawners
 
 	: ~/Star
 	{
-		Count = [60, 75]
-		Distance = [50, 200]
+		Count = [50, 60]
+		Distance = [50, 160]
 	}
 
 //	: ~/StarD
 //	{
 //		Count = [60, 75]
-//		Distance = [50, 200]
+//		Distance = [50, 160]
 //	}
 ]
 
