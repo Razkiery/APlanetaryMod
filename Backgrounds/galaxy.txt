@@ -11,7 +11,7 @@ RecenterFactorPerSecond = 0
 
 Material
 {
-	Shader = "../../../Data/Backgrounds/background.shader"
+	Shader = "./Data/Backgrounds/background.shader"
 	_grayscaleFactor = &~/GrayscaleFactor
 }
 

@@ -34,8 +34,46 @@ Actions
 //	}
 	{
 		Action = Overrides;
-		OverrideIn = "<Galaxy Map/Map Generators/simple galaxy.txt>"
-		Overrides = &<Init/simple galaxy.txt>
+		OverrideIn = "<Galaxy Map/Map Generators/map sizes.txt>"
+		Overrides = {
+			Planetary
+			{
+				NameKey = "MapSizes/Planetary"
+				TipKey = "MapSizes/PlanetaryTip"
+				MapGenerator = &<Init/planetary galaxy.txt>
+			}
+		}
+	}
+	{
+		Action = Overrides;
+		OverrideIn = "<Bounty Mode/bounty mode.txt>"
+		Overrides = {
+			MapSizes
+			[
+				&<./Data/Galaxy Map/Map Generators/map sizes.txt>/Tiny
+				&<./Data/Galaxy Map/Map Generators/map sizes.txt>/Small
+				&<./Data/Galaxy Map/Map Generators/map sizes.txt>/Standard
+				&<./Data/Galaxy Map/Map Generators/map sizes.txt>/Large
+				&<./Data/Galaxy Map/Map Generators/map sizes.txt>/Huge
+				&<./Data/Galaxy Map/Map Generators/map sizes.txt>/Planetary
+			]
+		}
+	}
+	{
+		Action = Overrides;
+		OverrideIn = "<Creative Mode/creative mode.txt>"
+		Overrides = {
+			MapSizes
+			[
+				&<./Data/Galaxy Map/Map Generators/map sizes.txt>/None
+				&<./Data/Galaxy Map/Map Generators/map sizes.txt>/Tiny
+				&<./Data/Galaxy Map/Map Generators/map sizes.txt>/Small
+				&<./Data/Galaxy Map/Map Generators/map sizes.txt>/Standard
+				&<./Data/Galaxy Map/Map Generators/map sizes.txt>/Large
+				&<./Data/Galaxy Map/Map Generators/map sizes.txt>/Huge
+				&<./Data/Galaxy Map/Map Generators/map sizes.txt>/Planetary
+			]
+		}
 	}
 	{
 		Action = Overrides;

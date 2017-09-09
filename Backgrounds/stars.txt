@@ -11,7 +11,7 @@ RecenterFactorPerSecond = .025
 
 Material
 {
-	Shader = "../../../Data/Backgrounds/background.shader"
+	Shader = "./Data/Backgrounds/background.shader"
 	_grayscaleFactor = &~/GrayscaleFactor
 }
 
@@ -77,7 +77,7 @@ Objects
 	{
 		Count = [200, 400]
 		TextureFiles = ["star2.png"]
-		Scale = [.2, .35]
+		Scale = [.2, 0.5]
 		Z = [.5, 1]
 		Rot = [0, 360d]
 		ColorHue = [120, 280]//[170, 360]

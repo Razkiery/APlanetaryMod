@@ -4,7 +4,7 @@ PlanetPixelSize = [128, 128]
 
 NodeSprite
 {
-	Texture = "../../../Data/Galaxy Map/map node.png"
+	Texture = "./Data/Galaxy Map/map node.png"
 	Size = [.4, .4]
 }
 NodeSpriteNormalColor = [0, 255, 84, 255]
@@ -17,7 +17,7 @@ NodeSpriteRotSpeed = 30d
 
 CurNodeSprite
 {
-	Texture = "../../../Data/Galaxy Map/cur map node.png"
+	Texture = "./Data/Galaxy Map/cur map node.png"
 }
 UnscaledCurNodeWorldSize = [.8, .8]
 CurNodePulseInterval = 1
@@ -28,7 +28,7 @@ CurNodeEndColor = [255, 255, 255, 217]
 
 DestNodeSprite
 {
-	Texture = "../../../Data/Galaxy Map/cur map node.png"
+	Texture = "./Data/Galaxy Map/cur map node.png"
 }
 UnscaledDestNodeWorldSize = [.8, .8]
 DestNodePulseInterval = 1
@@ -57,7 +57,7 @@ CourseLine
 {
 	Sprite
 	{
-		Texture = "../../../Data/Galaxy Map/warp line.png"
+		Texture = "./Data/Galaxy Map/warp line.png"
 		VertexColor = [255, 255, 255, 229]
 	}
 	Thickness = .15
@@ -77,10 +77,11 @@ Camera
 	MouseWheelZoomSpeed = 10
 	BorderClampPanSpeed = 10
 	FollowFactor = .9999
+	MaxScreenShake = 1
 
 	ZoomClickSound
 	{
-		Sound = "../../../Data/Gui/zoom_click.wav"
+		Sound = "./Data/Gui/zoom_click.wav"
 		Volume = .125
 		Speed = 1
 	}
@@ -97,7 +98,7 @@ CellStyles
 
 CellStylesMaterial
 {
-	Shader = "../../../Data/Backgrounds/background.shader"
+	Shader = "./Data/Backgrounds/background.shader"
 }
 
 CellStylesAtlasParams
@@ -108,7 +109,7 @@ CellStylesAtlasParams
 
 PlanetOrbitCircle
 {
-	Texture = "../../../Data/Gui/selection gradient.png"
+	Texture = "./Data/Gui/selection gradient.png"
 	VertexColor = [255, 255, 255, 63]
 	Thickness = .05
 	QuadCount = 256
@@ -118,10 +119,10 @@ FlyOutLineColor = [0, 255, 84, 178]
 
 NodeHighlightSound
 {
-	Sound = "../../../Data/Gui/hover.wav"
+	Sound = "./Data/Gui/hover.wav"
 	Volume = .05
 }
 NodePressedSound
 {
-	Sound = "../../../Data/Gui/press.wav"
+	Sound = "./Data/Gui/press.wav"
 }

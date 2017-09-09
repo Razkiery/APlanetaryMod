@@ -16,7 +16,7 @@ AtlasTextureParams
 
 ShroudMaterial
 {
-	Shader = "../../../Data/Backgrounds/shroud.shader"
+	Shader = "./Data/Backgrounds/shroud.shader"
 	_dimColor = [.75, .75, .75, 1]
 	_borderAddColor = [.5, .5, .5, 0]
 }
