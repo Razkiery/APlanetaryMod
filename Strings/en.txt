@@ -1,9 +1,22 @@
 Planets
 {
 		asgard = "Asgardian"
-		hole = "Black Hole"
+		alers = "Alers"
+		caipulia = "Caipulia"
+		eirio = "Eirio"
+		hole = "Black Hole"ç
+		krats = "Krats"
+		miriners = "Miriners"
+		mooran = "Mooran"
+		oori = "Oori"
+		rionrs = "Rionrs"
+		shierans = "Shierans"
+		stiff = "Stiff"
 		sunblue = "Blue Sun"
 		sunred = "Red Sun"
+		vesper = "Vesper"
+		xiurina = "Xiurina"
+		zuo = "Zuo"
 }
 MapSizes
 {
