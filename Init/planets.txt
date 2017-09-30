@@ -4,4 +4,17 @@ Styles
 	hole = &<../Planets/blackhole.txt>
 	sunblue = &<../Planets/sunblue.txt>
 	sunred = &<../Planets/sunred.txt>
+	alers = &<../Planets/Alers.txt>
+	caipulia = &<../Planets/Caipulia.txt>
+	eirio = &<../Planets/Eirio.txt>
+	krats = &<../Planets/Krats.txt>
+	miriners = &<../Planets/Miriners.txt>
+	mooran = &<../Planets/Mooran.txt>
+	oori = &<../Planets/Oori.txt>
+	rionrs = &<../Planets/Rionrs.txt>
+	shierans = &<../Planets/Shierans.txt>
+	stiff = &<../Planets/Stiff.txt>
+	vesper = &<../Planets/Vesper.txt>
+	xiurina = &<../Planets/Xiurina.txt>
+	Zuo = &<../Planets/Zuo.txt>
 }

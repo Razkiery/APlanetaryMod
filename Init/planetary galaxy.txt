@@ -267,6 +267,8 @@ InnerPlanet : Planet
 		"miriners"
 		"mooran"
 		"mooran"
+		"rionrs"
+		"rionrs"
 	]
 	Size = [.4, .6]
 	HasOrbit = true
