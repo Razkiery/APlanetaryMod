@@ -17,7 +17,7 @@ Material
 
 Objects
 [
-	// Background noise.
+/*	// Background noise.
 	{
 		Count = [3, 6]
 		TextureFiles
@@ -47,7 +47,7 @@ Objects
 		}
 		PerlinRandExponent = .33
 	}
-
+*/
 	// Your basic star.
 	{
 		Count = [400, 600]

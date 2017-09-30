@@ -2,6 +2,8 @@ Planets
 {
 		asgard = "Asgardian"
 		hole = "Black Hole"
+		sunblue = "Blue Sun"
+		sunred = "Red Sun"
 }
 MapSizes
 {

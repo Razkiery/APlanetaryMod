@@ -99,21 +99,77 @@ Spawners
 
 	: ~/Star
 	{
-		Count = [50, 60]
+		Count = [10, 13]//[50, 60]
+		Distance = [50, 160]
+	}
+	
+	: ~/Giant
+	{
+		Styles = ["sunblue"]
+	}
+	
+	: ~/Giant
+	{
+		Styles = ["sunred"]
+	}
+
+	: ~/StarB
+	{
+		Count = [12, 15]//[50, 60]
 		Distance = [50, 160]
 	}
 
-//	: ~/StarD
-//	{
-//		Count = [60, 75]
-//		Distance = [50, 160]
-//	}
 ]
 
 Planet
 {
 	Type = Planet
 	NameGenerator = &<./Data/Galaxy Map/Name Generators/celestial.txt>/Main
+}
+
+Giant : ~/Star //giant
+{
+	NameGenerator = {
+	Type = Multi
+	SubGenerators
+	[
+		{
+			Generator = {
+				Type = NameList
+				Names
+				[
+					"SuperMassive"
+				]
+			}
+			Chance = 1
+		}
+		{
+			Generator = &<./Data/Galaxy Map/Name Generators/celestial.txt>/LatinMarkov
+			Chance = 1
+		}
+		{
+			Generator = &<./Data/Galaxy Map/Name Generators/celestial.txt>/Suffixes
+			Chance = .5
+		}
+	]
+	}
+	Count = [2, 3]//[50, 60]
+	Distance = [50, 160]
+	Size = [3,5]//[1.5, 2]
+	SubSpawners
+	[
+		: ~/InnerPlanet
+		{
+			Distance = [4.5, 7]
+			Count = [3, 4]
+		}
+
+		: ~/OuterPlanet
+		{
+			Distance = [7, 11]
+			Count = [4, 5]
+		}
+	]
 }
 
 Star : Planet
@@ -138,13 +194,9 @@ Star : Planet
 	]
 }
 
-StarD : Planet
+StarB : Star
 {
-	MinDistFromOtherObjects = 20
-	Styles = ["quasar"]
-	Size = [1.5, 2]
-	IsLightSource = true
-	LightHeight = 3
+	Styles = ["sunblue"]
 
 	SubSpawners
 	[
@@ -160,18 +212,30 @@ StarD : Planet
 	]
 }
 
-
-Hole : Planet
+Hole
 {
+	Type = Planet
+	NameGenerator = {
+		Type = Multi
+		SubGenerators
+		[
+			{
+				Generator = {
+					Type = NameList
+					Names
+					[
+						"Sagittarius A"
+					]
+				}
+				Chance = 1
+			}
+		]
+	}
+	
 	MinDistFromOtherObjects = 400
 	Styles = ["hole"]
 	Size = [25, 28]
 	IsLightSource = false
-	LightHeight = 3
-
-	SubSpawners
-	[	
-	]
 }
 
 

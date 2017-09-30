@@ -2,5 +2,6 @@ Styles
 {
 	asgard = &<../Planets/Asgard.txt>
 	hole = &<../Planets/blackhole.txt>
-	quasar = &<../Planets/quasar.txt>
+	sunblue = &<../Planets/sunblue.txt>
+	sunred = &<../Planets/sunred.txt>
 }
