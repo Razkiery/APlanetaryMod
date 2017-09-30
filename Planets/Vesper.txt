@@ -1,4 +1,4 @@
-NameKey = Planets/Vesper
+NameKey = Planets/vesper
 RotSpeed
 {
 	Min = -0.5

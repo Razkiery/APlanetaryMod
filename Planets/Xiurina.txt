@@ -1,4 +1,4 @@
-NameKey = Planets/Xiurina
+NameKey = Planets/xiurina
 RotSpeed
 {
 	Min = -0.5

@@ -1,4 +1,4 @@
-NameKey = Planets/Eirio
+NameKey = Planets/eirio
 RotSpeed
 {
 	Min = -0.5

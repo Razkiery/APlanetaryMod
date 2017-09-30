@@ -1,4 +1,4 @@
-NameKey = Planets/Oori
+NameKey = Planets/oori
 RotSpeed
 {
 	Min = -0.5

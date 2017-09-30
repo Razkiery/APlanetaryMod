@@ -1,4 +1,4 @@
-NameKey = Planets/Stiff
+NameKey = Planets/stiff
 RotSpeed
 {
 	Min = -0.5

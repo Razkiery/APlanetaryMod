@@ -1,4 +1,4 @@
-NameKey = Planets/Miriners
+NameKey = Planets/miriners
 RotSpeed
 {
 	Min = -0.5

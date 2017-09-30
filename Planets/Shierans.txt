@@ -1,4 +1,4 @@
-NameKey = Planets/Shierans
+NameKey = Planets/shierans
 RotSpeed
 {
 	Min = -0.5

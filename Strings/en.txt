@@ -4,7 +4,7 @@ Planets
 		alers = "Alers"
 		caipulia = "Caipulia"
 		eirio = "Eirio"
-		hole = "Black Hole"ç
+		hole = "Black Hole"
 		krats = "Krats"
 		miriners = "Miriners"
 		mooran = "Mooran"

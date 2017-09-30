@@ -1,4 +1,4 @@
-NameKey = Planets/Krats
+NameKey = Planets/krats
 RotSpeed
 {
 	Min = -0.5

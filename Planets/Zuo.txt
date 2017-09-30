@@ -1,4 +1,4 @@
-NameKey = Planets/Zuo
+NameKey = Planets/zuo
 RotSpeed
 {
 	Min = -0.5

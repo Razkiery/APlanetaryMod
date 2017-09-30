@@ -1,4 +1,4 @@
-NameKey = Planets/Alers
+NameKey = Planets/alers
 RotSpeed
 {
 	Min = -0.5

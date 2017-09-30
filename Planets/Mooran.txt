@@ -1,4 +1,4 @@
-NameKey = Planets/Mooran
+NameKey = Planets/mooran
 RotSpeed
 {
 	Min = -0.5
