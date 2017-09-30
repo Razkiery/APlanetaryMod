@@ -14,6 +14,7 @@ Planets
 		stiff = "Stiff"
 		sunblue = "Blue Sun"
 		sunred = "Red Sun"
+		sungreen = "Green Sun"
 		vesper = "Vesper"
 		xiurina = "Xiurina"
 		zuo = "Zuo"

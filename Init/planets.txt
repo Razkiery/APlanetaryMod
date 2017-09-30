@@ -4,6 +4,7 @@ Styles
 	hole = &<../Planets/blackhole.txt>
 	sunblue = &<../Planets/sunblue.txt>
 	sunred = &<../Planets/sunred.txt>
+	sungreen = &<../Planets/sungreen.txt>
 	alers = &<../Planets/Alers.txt>
 	caipulia = &<../Planets/Caipulia.txt>
 	eirio = &<../Planets/Eirio.txt>

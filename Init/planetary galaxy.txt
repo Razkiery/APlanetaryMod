@@ -53,7 +53,22 @@ Spawners
 			Octaves = 3 //3 // lower numbers make it much less random, like less seeds were planted, and more of it is connected together.
 		}
 	}
-
+/* old asteroids
+	{
+		Type = PerlinHexCells
+		HexRadius = 150
+		Styles = ["asteroid_cell"]
+		NoiseRange = [0, 0.3] //[0, .3] //changes how thick the lines are
+		NoiseFalloff = -1 //-1 // can only be -1 or less, otherwise itll do weird things stretching out to the edge
+		NoiseFalloffRange = [135, 136]
+		NoiseFallonRange = [105, 116]//[190, 210] //[190, 210] //Circular boarder from center on which it stops appearing generally.
+		PerlinNoise
+		{
+			GridSize = [4, 5] //[20, 20] // smaller numbers make it more stringy instead of clumped together
+			Octaves = 1 //3 // lower numbers make it much less random, like less seeds were planted, and more of it is connected together.
+		}
+	}
+*/
 	// Red nebula.
 	{
 		Type = PerlinHexCells
@@ -93,16 +108,8 @@ Spawners
 	
 	: ~/Hole
 	{
-		Count = 1
-		Distance = 0
 	}	
 
-	: ~/Star
-	{
-		Count = [10, 13]//[50, 60]
-		Distance = [50, 160]
-	}
-	
 	: ~/Giant
 	{
 		Styles = ["sunblue"]
@@ -112,13 +119,25 @@ Spawners
 	{
 		Styles = ["sunred"]
 	}
-
-	: ~/StarB
+	
+	: ~/Dwarf
 	{
-		Count = [12, 15]//[50, 60]
-		Distance = [50, 160]
+		Styles = ["sungreen"]
+	}
+	
+	: ~/Star
+	{
 	}
 
+	: ~/Star
+	{
+		Styles = ["sunblue"]
+	}
+	
+	: ~/Star
+	{
+		Styles = ["sunred"]
+	}
 ]
 
 Planet
@@ -138,7 +157,7 @@ Giant : ~/Star //giant
 				Type = NameList
 				Names
 				[
-					"SuperMassive"
+					"Super-Massive"
 				]
 			}
 			Chance = 1
@@ -153,7 +172,7 @@ Giant : ~/Star //giant
 		}
 	]
 	}
-	Count = [2, 3]//[50, 60]
+	Count = [1, 2]//[50, 60]
 	Distance = [50, 160]
 	Size = [3,5]//[1.5, 2]
 	SubSpawners
@@ -172,8 +191,58 @@ Giant : ~/Star //giant
 	]
 }
 
+Dwarf : ~/Star 
+{
+	MinDistFromOtherObjects = 1
+	NameGenerator = {
+	Type = Multi
+	SubGenerators
+	[
+		{
+			Generator = {
+				Type = NameList
+				Names
+				[
+					"Dwarf"
+				]
+			}
+			Chance = 1
+		}
+		{
+			Generator = &<./Data/Galaxy Map/Name Generators/celestial.txt>/LatinMarkov
+			Chance = 1
+		}
+		{
+			Generator = &<./Data/Galaxy Map/Name Generators/celestial.txt>/Suffixes
+			Chance = .5
+		}
+	]
+	}
+	Count = [1, 3]//[50, 60]
+	Distance = [50, 160]
+	Size = [0.3,0.7]//[1.5, 2]
+	SubSpawners
+	[
+		: ~/InnerPlanet
+		{
+			Distance = [2, 3]
+			MinDistFromOtherObjects = 2
+			Count = [1, 3]
+		}
+
+		: ~/OuterPlanet
+		{
+			Distance = [2, 4]
+			MinDistFromOtherObjects = 2
+			Count = [2, 4]
+		}
+	]
+}
+
 Star : Planet
 {
+	Distance = [50, 160]
+	Count = [17, 25]//[50, 60]
 	MinDistFromOtherObjects = 20
 	Styles = ["sun"]
 	Size = [1.5, 2]
@@ -194,27 +263,22 @@ Star : Planet
 	]
 }
 
-StarB : Star
+Belt : Planet
 {
-	Styles = ["sunblue"]
-
-	SubSpawners
+	MinDistFromOtherObjects = 0.5
+	Styles
 	[
-		: ~/InnerPlanet
-		{
-			Count = [3, 4]
-		}
-
-		: ~/OuterPlanet
-		{
-			Count = [4, 5]
-		}
+		"rocky"
 	]
+	Size = [.5, 1]
+	HasOrbit = false
 }
 
 Hole
 {
 	Type = Planet
+	Count = 1
+	Distance = 0
 	NameGenerator = {
 		Type = Multi
 		SubGenerators
@@ -236,6 +300,16 @@ Hole
 	Styles = ["hole"]
 	Size = [25, 28]
 	IsLightSource = false
+	
+/*	SubSpawners
+	[
+		: ~/Belt
+		{
+			Count = [1500, 2000]
+			Distance = [35, 37]
+		}
+	]
+*/
 }
 
 

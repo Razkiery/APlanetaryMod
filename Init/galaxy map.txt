@@ -94,6 +94,7 @@ CellStyles
 	&<../GalaxyMap/red_cell.txt>
 	&<../GalaxyMap/gold_cell.txt>
 	&<../GalaxyMap/green_cell.txt>
+	&<../GalaxyMap/asteroid_cell.txt>
 ]
 
 CellStylesMaterial

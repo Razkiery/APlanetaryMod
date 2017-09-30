@@ -1,0 +1,29 @@
+ID = asteroid_cell
+SimBackgroundID = Blue
+
+Objects
+[
+	// Blue nebula.
+	{
+		Count = [3, 4]
+		MaxDistFromCenter = .2
+		TextureFiles
+		[
+			"../Backgrounds/asteroid.png"
+			"../Backgrounds/blank.png"
+			"../Backgrounds/blank.png"
+		]
+		Size
+		{
+			Min = [0.25, 0.5]
+			Max = [0.5, 0.75]
+		}
+		Scale = [.25, 0.5]
+		Rot = [0, 360d]
+		RotSpeed= [-10d, 10d]
+		ColorHue = [220, 260]//240
+		ColorSat = 0
+		ColorVal = [.5, 1]
+		ColorAlpha = [0.9, 1]
+	}
+]
