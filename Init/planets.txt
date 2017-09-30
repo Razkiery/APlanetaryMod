@@ -16,5 +16,5 @@ Styles
 	stiff = &<../Planets/Stiff.txt>
 	vesper = &<../Planets/Vesper.txt>
 	xiurina = &<../Planets/Xiurina.txt>
-	Zuo = &<../Planets/Zuo.txt>
+	zuo = &<../Planets/Zuo.txt>
 }
