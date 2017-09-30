@@ -65,9 +65,9 @@ Layers
 					Pos = -1
 					Color
 					{
-						R = 0
+						R = 170
 						G = 0
-						B = 200
+						B = 0
 						A = 255
 					}
 				}
@@ -85,8 +85,8 @@ Layers
 		}
 		HueVariance
 		{
-			Min = -20
-			Max = 20
+			Min = -10
+			Max = 10
 		}
 		SaturationVariance
 		{
@@ -173,9 +173,9 @@ Layers
 					Pos = 0.5
 					Color
 					{
-						R = 0
-						G = 192
-						B = 255
+						R = 255
+						G = 100
+						B = 0
 						A = 127
 					}
 				}
@@ -200,8 +200,8 @@ Layers
 		}
 		HueVariance
 		{
-			Min = -20
-			Max = 20
+			Min = -10
+			Max = 10
 		}
 		SaturationVariance
 		{
