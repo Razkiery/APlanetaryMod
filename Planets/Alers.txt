@@ -1,8 +1,8 @@
 NameKey = Planets/alers
 RotSpeed
 {
-	Min = -0.5
-	Max = 1
+	Min = -20
+	Max = 20
 }
 Layers
 [
@@ -13,21 +13,21 @@ Layers
 			Seed = 0
 			GridSize
 			{
-				X = 0.60
-				Y = 0.125
+				X = 0.20
+				Y = 0.04
 			}
 			RepeatX = 16
 			RepeatY = 0
-			Octaves = 5
-			Persistence = 0.5
-			OutputScale = 1
+			Octaves = 10
+			Persistence = 0
+			OutputScale = 0
 			ClampOutput
 			{
-				Min = -1
-				Max = 1
+				Min = 0
+				Max = 0
 			}
 		}
-		PoleEffect = 1
+		PoleEffect = 100
 		PoleEffectLatitudeExponent = 1
 		ColorRamp
 		{
@@ -37,10 +37,10 @@ Layers
 					Pos = -1
 					Color
 					{
-						R = 50
-						G = 54
-						B = 43
-						A = 225
+						R = 255
+						G = 255
+						B = 255
+						A = 255
 					}
 					Segments = 4
 				}
@@ -48,16 +48,16 @@ Layers
 					Pos = 1
 					Color
 					{
-						R = 88
-						G = 154
-						B = 50
-						A = 205
+						R = 255
+						G = 255
+						B = 255
+						A = 255
 					}
 					Segments = 6
 				}
 			]
 		}
-		UseLatitudeRamp = false
+		UseLatitudeRamp = true
 		LatitudeRampExponent = 1
 		LatitudeColorRamp
 		{
@@ -67,9 +67,9 @@ Layers
 					Pos = -1
 					Color
 					{
-						R = 130
-						G = 205
-						B = 25
+						R = 255
+						G = 255
+						B = 255
 						A = 255
 					}
 					Segments = 5
@@ -78,9 +78,9 @@ Layers
 					Pos = 1
 					Color
 					{
-						R = 230
+						R = 255
 						G = 255
-						B = 40
+						B = 255
 						A = 255
 					}
 					Segments = 10
@@ -89,18 +89,18 @@ Layers
 		}
 		HueVariance
 		{
-			Min = -30
-			Max = 30
+			Min = 0
+			Max = 0
 		}
 		SaturationVariance
 		{
-			Min = -0.5
+			Min = 0
 			Max = 0
 		}
 		ValueVariance
 		{
-			Min = -0.25
-			Max = 0.25
+			Min = 0
+			Max = 0
 		}
 		AlphaVariance
 		{
@@ -109,12 +109,12 @@ Layers
 		}
 		LayerRotSpeed
 		{
-			Min = -0.1
-			Max = 0.5
+			Min = 0
+			Max = 0
 		}
-		Darkness = 0.9
+		Darkness = 1
 		Enabled = true
-		RadiusScale = 0.6
+		RadiusScale = 1
 	}
 	{
 		Type = Perlin
@@ -129,7 +129,7 @@ Layers
 			RepeatX = 16
 			RepeatY = 0
 			Octaves = 5
-			Persistence = 0.5
+			Persistence = 1
 			OutputScale = 1
 			ClampOutput
 			{
@@ -147,10 +147,10 @@ Layers
 					Pos = -1
 					Color
 					{
-						R = 0
-						G = 0
-						B = 0
-						A = 0
+						R = 255
+						G = 255
+						B = 255
+						A = 255
 					}
 					Segments = 0
 				}
@@ -158,9 +158,9 @@ Layers
 					Pos = -0.05
 					Color
 					{
-						R = 0
-						G = 0
-						B = 0
+						R = 255
+						G = 255
+						B = 255
 						A = 255
 					}
 					Segments = 0
@@ -169,38 +169,8 @@ Layers
 					Pos = 0.05
 					Color
 					{
-						R = 0
-						G = 0
-						B = 0
-						A = 255
-					}
-					Segments = 0
-				}
-				{
-					Pos = 1
-					Color
-					{
-						R = 0
-						G = 0
-						B = 0
-						A = 0
-					}
-					Segments = 0
-				}
-			]
-		}
-		UseLatitudeRamp = false
-		LatitudeRampExponent = 1
-		LatitudeColorRamp
-		{
-			Colors
-			[
-				{
-					Pos = -1
-					Color
-					{
-						R = 0
-						G = 0
+						R = 255
+						G = 255
 						B = 255
 						A = 255
 					}
@@ -210,9 +180,39 @@ Layers
 					Pos = 1
 					Color
 					{
-						R = 0
+						R = 255
 						G = 255
-						B = 0
+						B = 255
+						A = 255
+					}
+					Segments = 0
+				}
+			]
+		}
+		UseLatitudeRamp = true
+		LatitudeRampExponent = 1
+		LatitudeColorRamp
+		{
+			Colors
+			[
+				{
+					Pos = -1
+					Color
+					{
+						R = 255
+						G = 255
+						B = 255
+						A = 255
+					}
+					Segments = 0
+				}
+				{
+					Pos = 1
+					Color
+					{
+						R = 255
+						G = 255
+						B = 255
 						A = 255
 					}
 					Segments = 0
@@ -236,7 +236,7 @@ Layers
 		}
 		AlphaVariance
 		{
-			Min = -1
+			Min = 0
 			Max = 0
 		}
 		LayerRotSpeed
@@ -244,7 +244,7 @@ Layers
 			Min = 0
 			Max = 0
 		}
-		Darkness = 0.9
+		Darkness = 1
 		Enabled = true
 		RadiusScale = 0.9
 	}
@@ -259,7 +259,7 @@ Layers
 				Y = 0.25
 			}
 			RepeatX = 8
-			RepeatY = 0
+			RepeatY = 8
 			Octaves = 1
 			Persistence = 0.5
 			OutputScale = 1
@@ -279,10 +279,10 @@ Layers
 					Pos = 1
 					Color
 					{
-						R = 0
-						G = 0
-						B = 0
-						A = 0
+						R = 255
+						G = 255
+						B = 255
+						A = 255
 					}
 					Segments = 0
 				}
@@ -290,9 +290,9 @@ Layers
 					Pos = 2
 					Color
 					{
-						R = 0
-						G = 0
-						B = 0
+						R = 255
+						G = 255
+						B = 255
 						A = 255
 					}
 					Segments = 0
@@ -309,8 +309,8 @@ Layers
 					Pos = -1
 					Color
 					{
-						R = 0
-						G = 0
+						R = 255
+						G = 255
 						B = 255
 						A = 255
 					}
@@ -320,9 +320,9 @@ Layers
 					Pos = 1
 					Color
 					{
-						R = 0
+						R = 255
 						G = 255
-						B = 0
+						B = 255
 						A = 255
 					}
 					Segments = 0
@@ -354,7 +354,7 @@ Layers
 			Min = 0
 			Max = 0
 		}
-		Darkness = 0.9
+		Darkness = 1
 		Enabled = true
 		RadiusScale = 0.9
 	}

@@ -1,4 +1,4 @@
-NameKey = Planets/caipulia
+NameKey = Planets/rionrs
 RotSpeed
 {
 	Min = -0.5
