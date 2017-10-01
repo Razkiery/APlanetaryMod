@@ -319,6 +319,8 @@ InnerPlanet : Planet
 	MinDistFromOtherObjects = 2.5
 	Styles
 	[
+		"alers"
+/*
 		"terra"
 		"terra"
 		"barren"
@@ -343,6 +345,7 @@ InnerPlanet : Planet
 		"mooran"
 		"rionrs"
 		"rionrs"
+*/
 	]
 	Size = [.4, .6]
 	HasOrbit = true
@@ -392,6 +395,8 @@ Moon : Planet
 	MinDistFromOtherObjects = .75
 	Styles
 	[
+		"alers"
+/*
 		"rocky"
 		"rocky"
 		"lava"
@@ -405,6 +410,7 @@ Moon : Planet
 		"krats"
 		"krats"
 		"caipulia"
+*/
 	]
 	Size = [.2, .3]
 	HasOrbit = true
