@@ -114,8 +114,8 @@ Layers
 	}
 	{
 		Type = Halo
-		OuterThickness = 0.2
-		InnerThickness = 0.01
+		OuterThickness = 0.0
+		InnerThickness = 0.0
 		PerlinNoise
 		{
 			Seed = 0
@@ -225,8 +225,8 @@ Layers
 	}
 	{
 		Type = Halo
-		OuterThickness = 0.05
-		InnerThickness = 0.005
+		OuterThickness = 0.0
+		InnerThickness = 0.00
 		PerlinNoise
 		{
 			Seed = 0

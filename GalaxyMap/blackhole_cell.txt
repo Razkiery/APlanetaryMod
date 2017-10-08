@@ -1,0 +1,27 @@
+ID = blackhole_cell
+SimBackgroundID = Blue
+
+Objects
+[
+	// Blue nebula.
+	{
+		Count = [2, 3]
+		MaxDistFromCenter = .0
+		TextureFiles
+		[
+			"../Backgrounds/blackholeaura.png"
+		]
+		Size
+		{
+			Min = [30, 30]
+			Max = [30, 30]
+		}
+		Scale = [1, 1]
+		Rot = [0, 360d]
+		RotSpeed= [0d,10d]//[-10d, 10d]
+		ColorHue = [220, 260]//240
+		ColorSat = 0//[0.75, 1]
+		ColorVal = [.5, 1]
+		ColorAlpha = [0.9, 1]
+	}
+]
