@@ -18,6 +18,14 @@ Planets
 		vesper = "Vesper"
 		xiurina = "Xiurina"
 		zuo = "Zuo"
+
+		sun = "Orange Sun"
+		alien = "Alien"
+		desert = "Desert"
+		gas = "Gassy"
+		icy = "Icy"
+		lava = "Lava"
+		terra = "Terra"
 }
 MapSizes
 {

@@ -2,7 +2,7 @@
 Name = "APlanetMod"
 Version = 0.0.0
 CompatibleGameVersions = ["0.12.12"]
-Author = "Ryuuro & Bubbet"
+Author = "Bubbet, Chank, and Ryuuro"
 Description = "Overhauls the look of the galaxy.\n\n"\
               "<red></red>"
 
@@ -11,8 +11,8 @@ Actions
 [
 	{
 		Action = Overrides;
-		OverrideIn = "<Planets/planets.txt>/Styles"
-		Overrides = &<Init/planets.txt>/Styles
+		OverrideIn = "<Planets/planets.txt>"
+		Overrides = &<Init/planets.txt>
 	}
 //	{// Any of the AddMany should be replacable with Overrides. Though I haven't tried.
 //		Action = AddMany;

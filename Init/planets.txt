@@ -18,4 +18,26 @@ Styles
 	vesper = &<../Planets/Vesper.txt>
 	xiurina = &<../Planets/Xiurina.txt>
 	zuo = &<../Planets/Zuo.txt>
+
+	sun = &<../Planets/sun.txt>
+	alien = &<../Planets/alien.txt>
+	barren = &<../Planets/barren.txt>
+	gas = &<../Planets/gas.txt>
+	icy = &<../Planets/icy.txt>
+	lava = &<../Planets/lava.txt>
+	terra = &<../Planets/terra.txt>
+	desert = &<../Planets/desert.txt>
 }
+
+PerlinMaterial
+{
+	Shader = "../Planets/perlin_planet.shader"
+	_grayscaleFactor = .75
+}
+
+HaloMaterial
+{
+	Shader = "../Planets/halo.shader"
+	_grayscaleFactor = .75
+}
+

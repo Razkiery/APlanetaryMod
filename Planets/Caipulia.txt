@@ -2,7 +2,7 @@ NameKey = Planets/caipulia
 RotSpeed
 {
 	Min = -0.5
-	Max = 1
+	Max = 0.5
 }
 Layers
 [
@@ -13,7 +13,7 @@ Layers
 			Seed = 0
 			GridSize
 			{
-				X = 0.60
+				X = 0.125
 				Y = 0.125
 			}
 			RepeatX = 16
@@ -38,9 +38,9 @@ Layers
 					Color
 					{
 						R = 50
-						G = 54
-						B = 43
-						A = 225
+						G = 230
+						B = 50
+						A = 255
 					}
 					Segments = 4
 				}
@@ -48,10 +48,10 @@ Layers
 					Pos = 1
 					Color
 					{
-						R = 88
-						G = 154
+						R = 30
+						G = 190
 						B = 50
-						A = 205
+						A = 255
 					}
 					Segments = 6
 				}
@@ -67,8 +67,8 @@ Layers
 					Pos = -1
 					Color
 					{
-						R = 130
-						G = 205
+						R = 10
+						G = 200
 						B = 25
 						A = 255
 					}
@@ -78,7 +78,7 @@ Layers
 					Pos = 1
 					Color
 					{
-						R = 230
+						R = 20
 						G = 255
 						B = 40
 						A = 255
@@ -159,9 +159,9 @@ Layers
 					Color
 					{
 						R = 0
-						G = 0
+						G = 150
 						B = 0
-						A = 255
+						A = 200
 					}
 					Segments = 0
 				}
@@ -170,9 +170,9 @@ Layers
 					Color
 					{
 						R = 0
-						G = 0
+						G = 100
 						B = 0
-						A = 255
+						A = 50
 					}
 					Segments = 0
 				}
@@ -181,9 +181,9 @@ Layers
 					Color
 					{
 						R = 0
-						G = 0
+						G = 200
 						B = 0
-						A = 0
+						A = 255
 					}
 					Segments = 0
 				}
@@ -246,7 +246,7 @@ Layers
 		}
 		Darkness = 0.9
 		Enabled = true
-		RadiusScale = 0.9
+		RadiusScale = 0.6
 	}
 	{
 		Type = Perlin
@@ -290,10 +290,10 @@ Layers
 					Pos = 2
 					Color
 					{
-						R = 0
-						G = 0
-						B = 0
-						A = 255
+						R = 220
+						G = 220
+						B = 220
+						A = 220
 					}
 					Segments = 0
 				}
@@ -356,6 +356,6 @@ Layers
 		}
 		Darkness = 0.9
 		Enabled = true
-		RadiusScale = 0.9
+		RadiusScale = 0.6
 	}
 ]
