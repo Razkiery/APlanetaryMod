@@ -1,3 +1,4 @@
+// a pretty good mod
 Name = "APlanetMod"
 Version = 0.0.0
 CompatibleGameVersions = ["0.12.12"]
