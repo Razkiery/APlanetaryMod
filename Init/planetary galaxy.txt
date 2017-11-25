@@ -334,13 +334,15 @@ InnerPlanet : Planet
 	Styles
 	[
 		"oori"
+
+		"terra"
+		
+		"barren"
+		
+		"alien"
+
+		"icy"
 /*
-		"terra"
-		"terra"
-		"barren"
-		"barren"
-		"alien"
-		"alien"
 		"asgard"
 		"asgard"
 		"zuo"

@@ -1,0 +1,472 @@
+NameKey = Planets/Barren
+RotSpeed
+{
+	Min = -0.1
+	Max = 0.1
+}
+Layers
+[
+	{
+		Type = Perlin
+		PerlinNoise
+		{
+			Seed = 0
+			GridSize
+			{
+				X = 0.125
+				Y = 0.125
+			}
+			RepeatX = 16
+			RepeatY = 0
+			Octaves = 5
+			Persistence = 0.5
+			OutputScale = 1
+			ClampOutput
+			{
+				Min = -1
+				Max = 1
+			}
+		}
+		PoleEffect = 0
+		PoleEffectLatitudeExponent = 1
+		ColorRamp
+		{
+			Colors
+			[
+				{
+					Pos = -1
+					Color
+					{
+						R = 0
+						G = 0
+						B = 0
+						A = 255
+					}
+					Segments = 0
+				}
+				
+				{
+					Pos = 1
+					Color
+					{
+						R = 0
+						G = 0
+						B = 0
+						A = 255
+					}
+					Segments = 0
+				}
+			]
+		}
+		UseLatitudeRamp = false
+		LatitudeRampExponent = 1
+		LatitudeColorRamp
+		{
+			Colors
+			[
+				{
+					Pos = -1
+					Color
+					{
+						R = 0
+						G = 0
+						B = 255
+						A = 255
+					}
+					Segments = 0
+				}
+				{
+					Pos = 1
+					Color
+					{
+						R = 0
+						G = 255
+						B = 0
+						A = 255
+					}
+					Segments = 0
+				}
+			]
+		}
+		HueVariance
+		{
+			Min = 0
+			Max = 0
+		}
+		SaturationVariance
+		{
+			Min = 0
+			Max = 0
+		}
+		ValueVariance
+		{
+			Min = 0
+			Max = 0
+		}
+		AlphaVariance
+		{
+			Min = -1
+			Max = 0
+		}
+		LayerRotSpeed
+		{
+			Min = 0
+			Max = 0
+		}
+		Darkness = 0.9
+		Enabled = true
+		RadiusScale = 0.9
+	}
+	{
+		Type = Perlin
+		PerlinNoise
+		{
+			Seed = 0
+			GridSize
+			{
+				X = 0.125
+				Y = 0.125
+			}
+			RepeatX = 16
+			RepeatY = 0
+			Octaves = 5
+			Persistence = 0.5
+			OutputScale = 1
+			ClampOutput
+			{
+				Min = -1
+				Max = 1
+			}
+		}
+		PoleEffect = 0
+		PoleEffectLatitudeExponent = 1
+		ColorRamp
+		{
+			Colors
+			[
+				{
+					Pos = -1
+					Color
+					{
+						R = 97
+						G = 74
+						B = 48
+						A = 190
+					}
+					Segments = 0
+				}
+				{
+					Pos = 1
+					Color
+					{
+						R = 188
+						G = 154
+						B = 100
+						A = 255
+					}
+					Segments = 0
+				}
+			]
+		}
+		UseLatitudeRamp = false
+		LatitudeRampExponent = 1
+		LatitudeColorRamp
+		{
+			Colors
+			[
+				{
+					Pos = -1
+					Color
+					{
+						R = 0
+						G = 0
+						B = 255
+						A = 255
+					}
+					Segments = 0
+				}
+				{
+					Pos = 1
+					Color
+					{
+						R = 0
+						G = 255
+						B = 0
+						A = 255
+					}
+					Segments = 0
+				}
+			]
+		}
+		HueVariance
+		{
+			Min = -30
+			Max = 30
+		}
+		SaturationVariance
+		{
+			Min = -0.5
+			Max = 0
+		}
+		ValueVariance
+		{
+			Min = -0.25
+			Max = 0.25
+		}
+		AlphaVariance
+		{
+			Min = 0
+			Max = 0
+		}
+		LayerRotSpeed
+		{
+			Min = 0
+			Max = 0
+		}
+		Darkness = 0.9
+		Enabled = true
+		RadiusScale = 0.9
+	}
+	{
+		Type = Perlin
+		PerlinNoise
+		{
+			Seed = 0
+			GridSize
+			{
+				X = 0.125
+				Y = 0.125
+			}
+			RepeatX = 16
+			RepeatY = 0
+			Octaves = 5
+			Persistence = 0.5
+			OutputScale = 1
+			ClampOutput
+			{
+				Min = -1
+				Max = 1
+			}
+		}
+		PoleEffect = 0
+		PoleEffectLatitudeExponent = 1
+		ColorRamp
+		{
+			Colors
+			[
+				{
+					Pos = -1
+					Color
+					{
+						R = 0
+						G = 0
+						B = 0
+						A = 0
+					}
+					Segments = 0
+				}
+				{
+					Pos = -0.05
+					Color
+					{
+						R = 0
+						G = 0
+						B = 0
+						A = 255
+					}
+					Segments = 0
+				}
+				{
+					Pos = 0.05
+					Color
+					{
+						R = 0
+						G = 0
+						B = 0
+						A = 255
+					}
+					Segments = 0
+				}
+				{
+					Pos = 1
+					Color
+					{
+						R = 0
+						G = 0
+						B = 0
+						A = 0
+					}
+					Segments = 0
+				}
+			]
+		}
+		UseLatitudeRamp = false
+		LatitudeRampExponent = 1
+		LatitudeColorRamp
+		{
+			Colors
+			[
+				{
+					Pos = -1
+					Color
+					{
+						R = 0
+						G = 0
+						B = 255
+						A = 255
+					}
+					Segments = 0
+				}
+				{
+					Pos = 1
+					Color
+					{
+						R = 0
+						G = 255
+						B = 0
+						A = 255
+					}
+					Segments = 0
+				}
+			]
+		}
+		HueVariance
+		{
+			Min = 0
+			Max = 0
+		}
+		SaturationVariance
+		{
+			Min = 0
+			Max = 0
+		}
+		ValueVariance
+		{
+			Min = 0
+			Max = 0
+		}
+		AlphaVariance
+		{
+			Min = -1
+			Max = 0
+		}
+		LayerRotSpeed
+		{
+			Min = 0
+			Max = 0
+		}
+		Darkness = 0.9
+		Enabled = true
+		RadiusScale = 0.9
+	}
+	{
+		Type = Perlin
+		PerlinNoise
+		{
+			Seed = 0
+			GridSize
+			{
+				X = 0.25
+				Y = 0.25
+			}
+			RepeatX = 8
+			RepeatY = 0
+			Octaves = 1
+			Persistence = 0.5
+			OutputScale = 1
+			ClampOutput
+			{
+				Min = -1
+				Max = 1
+			}
+		}
+		PoleEffect = 3
+		PoleEffectLatitudeExponent = 7
+		ColorRamp
+		{
+			Colors
+			[
+				{
+					Pos = 1
+					Color
+					{
+						R = 0
+						G = 0
+						B = 0
+						A = 0
+					}
+					Segments = 0
+				}
+				{
+					Pos = 2
+					Color
+					{
+						R = 0
+						G = 0
+						B = 0
+						A = 255
+					}
+					Segments = 0
+				}
+			]
+		}
+		UseLatitudeRamp = false
+		LatitudeRampExponent = 1
+		LatitudeColorRamp
+		{
+			Colors
+			[
+				{
+					Pos = -1
+					Color
+					{
+						R = 0
+						G = 0
+						B = 255
+						A = 255
+					}
+					Segments = 0
+				}
+				{
+					Pos = 1
+					Color
+					{
+						R = 0
+						G = 255
+						B = 0
+						A = 255
+					}
+					Segments = 0
+				}
+			]
+		}
+		HueVariance
+		{
+			Min = 0
+			Max = 0
+		}
+		SaturationVariance
+		{
+			Min = 0
+			Max = 0
+		}
+		ValueVariance
+		{
+			Min = 0
+			Max = 0
+		}
+		AlphaVariance
+		{
+			Min = 0
+			Max = 0
+		}
+		LayerRotSpeed
+		{
+			Min = 0
+			Max = 0
+		}
+		Darkness = 0.9
+		Enabled = true
+		RadiusScale = 0.9
+	}
+]
