@@ -386,7 +386,7 @@ OuterPlanet : Planet
 {
 	Distance = [5, 9]
 	MinDistFromOtherObjects = 4
-	Styles = ["gas"]
+	Styles = ["gas", "ringedgas"]
 	Size = [.8, 1]
 	HasOrbit = true
 

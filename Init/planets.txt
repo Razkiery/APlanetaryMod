@@ -27,6 +27,7 @@ Styles
 	lava = &<../Planets/lava.txt>
 	terra = &<../Planets/terra.txt>
 	desert = &<../Planets/desert.txt>
+	ringedgas = &<../Planets/ringedgas.txt>
 }
 
 PerlinMaterial

@@ -1,0 +1,460 @@
+NameKey = Planets/Gas
+RotSpeed
+{
+	Min = -0.1
+	Max = 0.1
+}
+Layers
+[
+	{
+		Type = Perlin
+		PerlinNoise
+		{
+			Seed = 0
+			GridSize
+			{
+				X = 0.125
+				Y = 0.125
+			}
+			RepeatX = 16
+			RepeatY = 0
+			Octaves = 5
+			Persistence = 0.5
+			OutputScale = 1
+			ClampOutput
+			{
+				Min = -1
+				Max = 1
+			}
+		}
+		PoleEffect = 0
+		PoleEffectLatitudeExponent = 1
+		ColorRamp
+		{
+			Colors
+			[
+				{
+					Pos = -1
+					Color
+					{
+						R = 255
+						G = 255
+						B = 255
+						A = 255
+					}
+					Segments = 0
+				}
+				{
+					Pos = 1
+					Color
+					{
+						R = 255
+						G = 255
+						B = 255
+						A = 255
+					}
+					Segments = 0
+				}
+				
+				
+			]
+		}
+		UseLatitudeRamp = false
+		LatitudeRampExponent = 1
+		LatitudeColorRamp
+		{
+			Colors
+			[
+				{
+					Pos = -1
+					Color
+					{
+						R = 0
+						G = 0
+						B = 255
+						A = 255
+					}
+					Segments = 0
+				}
+				{
+					Pos = 1
+					Color
+					{
+						R = 0
+						G = 255
+						B = 0
+						A = 255
+					}
+					Segments = 0
+				}
+			]
+		}
+		HueVariance
+		{
+			Min = 0
+			Max = 0
+		}
+		SaturationVariance
+		{
+			Min = 0
+			Max = 0
+		}
+		ValueVariance
+		{
+			Min = 0
+			Max = 0
+		}
+		AlphaVariance
+		{
+			Min = 0
+			Max = 0
+		}
+		LayerRotSpeed
+		{
+			Min = 0
+			Max = 0
+		}
+		Darkness = 0.9
+		Enabled = true
+		RadiusScale = 0.9
+	}
+	{
+		Type = Perlin
+		PerlinNoise
+		{
+			Seed = 0
+			GridSize
+			{
+				X = 0.25
+				Y = 0.0625
+			}
+			RepeatX = 8
+			RepeatY = 0
+			Octaves = 3
+			Persistence = 0.5
+			OutputScale = 1
+			ClampOutput
+			{
+				Min = -1
+				Max = 1
+			}
+		}
+		PoleEffect = 0
+		PoleEffectLatitudeExponent = 1
+		ColorRamp
+		{
+			Colors
+			[
+				{
+					Pos = -1
+					Color
+					{
+						R = 255
+						G = 255
+						B = 127
+						A = 200
+					}
+					Segments = 0
+				}
+				{
+					Pos = 1
+					Color
+					{
+						R = 255
+						G = 127
+						B = 0
+						A = 255
+					}
+					Segments = 0
+				}
+			]
+		}
+		UseLatitudeRamp = false
+		LatitudeRampExponent = 1
+		LatitudeColorRamp
+		{
+			Colors
+			[
+				{
+					Pos = -1
+					Color
+					{
+						R = 0
+						G = 0
+						B = 255
+						A = 255
+					}
+					Segments = 0
+				}
+				{
+					Pos = 1
+					Color
+					{
+						R = 0
+						G = 255
+						B = 0
+						A = 255
+					}
+					Segments = 0
+				}
+			]
+		}
+		HueVariance
+		{
+			Min = -180
+			Max = 180
+		}
+		SaturationVariance
+		{
+			Min = -0.5
+			Max = 0
+		}
+		ValueVariance
+		{
+			Min = 0
+			Max = 0
+		}
+		AlphaVariance
+		{
+			Min = 0
+			Max = 0
+		}
+		LayerRotSpeed
+		{
+			Min = 0
+			Max = 0
+		}
+		Darkness = 0.947214067
+		Enabled = true
+		RadiusScale = 0.9
+	}
+	{
+		Type = Halo
+		OuterThickness = 0.1
+		InnerThickness = 3
+		PerlinNoise
+		{
+			Seed = 0
+			GridSize
+			{
+				X = 0.15
+				Y = 0.15
+			}
+			RepeatX = 8
+			RepeatY = 0
+			Octaves = 5
+			Persistence = 0.5
+			OutputScale = 1
+			ClampOutput
+			{
+				Min = -1
+				Max = 1
+			}
+		}
+		ColorRamp
+		{
+			Colors
+			[
+				{
+					Pos = -1
+					Color
+					{
+						R = 255
+						G = 255
+						B = 255
+						A = 20
+					}
+					Segments = 0
+				}
+				{
+					Pos = -0.7
+					Color
+					{
+						R = 255
+						G = 255
+						B = 255
+						A = 120
+					}
+					Segments = 0
+				}
+				{
+					Pos = -0.65
+					Color
+					{
+						R = 50
+						G = 50
+						B = 50
+						A = 25
+					}
+					Segments = 0
+				}
+				{
+					Pos = -0.6
+					Color
+					{
+						R = 255
+						G = 253
+						B = 250
+						A = 60
+					}
+					Segments = 0
+				}
+				{
+					Pos = -0.5
+					Color
+					{
+						R = 255
+						G = 253
+						B = 250
+						A = 160
+					}
+					Segments = 0
+				}
+				{
+					Pos = -0.45
+					Color
+					{
+						R = 50
+						G = 50
+						B = 50
+						A = 25
+					}
+					Segments = 0
+				}
+				{
+					Pos = -0.4
+					Color
+					{
+						R = 255
+						G = 255
+						B = 255
+						A = 50
+					}
+					Segments = 0
+				}
+				{
+					Pos = 0
+					Color
+					{
+						R = 255
+						G = 255
+						B = 255
+						A = 180
+					}
+					Segments = 0
+				}
+				{
+					Pos = 0.05
+					Color
+					{
+						R = 50
+						G = 50
+						B = 50
+						A = 25
+					}
+					Segments = 0
+				}
+				{
+					Pos = 0.08
+					Color
+					{
+						R = 155
+						G = 155
+						B = 125
+						A = 200
+					}
+					Segments = 0
+				}
+				
+				
+				{
+					Pos = 0.4
+					Color
+					{
+						R = 155
+						G = 155
+						B = 125
+						A = 200
+					}
+					Segments = 0
+				}
+				{
+					Pos = 0.45
+					Color
+					{
+						R = 50
+						G = 50
+						B = 50
+						A = 25
+					}
+					Segments = 0
+				}
+				{
+					Pos = 0.7
+					Color
+					{
+						R = 50
+						G = 50
+						B = 50
+						A = 25
+					}
+					Segments = 0
+				}
+				{
+					Pos = 0.8
+					Color
+					{
+						R = 255
+						G = 255
+						B = 255
+						A = 130
+					}
+					Segments = 0
+				}
+				
+				{
+					Pos = 1
+					Color
+					{
+						R = 255
+						G = 255
+						B = 255
+						A = 100
+					}
+					Segments = 0
+				}
+			]
+		}
+		ColorScale
+		{
+			R = 128
+			G = 0
+			B = 160
+			A = 0
+		}
+		HueVariance
+		{
+			Min = 0
+			Max = 10
+		}
+		SaturationVariance
+		{
+			Min = 0
+			Max = 0
+		}
+		ValueVariance
+		{
+			Min = 0
+			Max = 0
+		}
+		AlphaVariance
+		{
+			Min = 0
+			Max = 0
+		}
+		AnimateSpeed = 1
+		Darkness = 0.7
+		Enabled = true
+		RadiusScale = 3
+	}
+]
