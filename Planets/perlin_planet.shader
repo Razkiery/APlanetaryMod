@@ -1,4 +1,4 @@
-#include "./Data/base.shader"
+#include "../base.shader"
 
 VERT_OUTPUT vert(in VERT_INPUT input)
 {
@@ -78,24 +78,20 @@ PIX_OUTPUT pix(in VERT_OUTPUT input) : SV_TARGET
 	bool clouds = (grayscale.r>=0.999);
 	float cloudadd= 0;
 	float alpha = ret.a;
-	float dim = max(0,dot(_lightNormal, Nt))*5;
-	float dim2 = max(0,dot(float3(0.8,0,0), Nt))*5;
+	float dim = max(0,dot(_lightNormal, nrml))*2;
+	float dim2 = max(0,dot(float3(0,0,0.8), Nt))*5;
 	if(!clouds){
-		bumpnormal = float3(rig - hmid + (hmid-lef),bot - hmid + (hmid-top),0.12);
-		bumpnormal = norm(bumpnormal);
-		nrml = float3(bumpnormal.x * Nb.x + bumpnormal.y * nrml.x + bumpnormal.z * Nt.x, 
-					  bumpnormal.x * Nb.y + bumpnormal.y * nrml.y + bumpnormal.z * Nt.y, 
-					  bumpnormal.x * Nb.z + bumpnormal.y * nrml.z + bumpnormal.z * Nt.z);
+		bumpnormal = float3(rig - hmid + (hmid-lef),0.12,bot - hmid + (hmid-top));
+		
 	}else{
-		bumpnormal = float3(rig - hmid + (hmid-lef),bot - hmid + (hmid-top),0.7);
-		bumpnormal = norm(bumpnormal);
-		nrml = float3(bumpnormal.x * Nb.x + bumpnormal.y * nrml.x + bumpnormal.z * Nt.x, 
-			  bumpnormal.x * Nb.y + bumpnormal.y * nrml.y + bumpnormal.z * Nt.y, 
-			  bumpnormal.x * Nb.z + bumpnormal.y * nrml.z + bumpnormal.z * Nt.z);
-
+		bumpnormal = float3(rig - hmid + (hmid-lef),0.7,bot - hmid + (hmid-top));
 		cloudadd = cub(1-hmid)-0.3;
 		
 	}
+	bumpnormal = norm(bumpnormal);
+	nrml = float3(bumpnormal.x * Nb.x + bumpnormal.y * nrml.x + bumpnormal.z * Nt.x, 
+			  bumpnormal.x * Nb.y + bumpnormal.y * nrml.y + bumpnormal.z * Nt.y, 
+			  bumpnormal.x * Nb.z + bumpnormal.y * nrml.z + bumpnormal.z * Nt.z);
 	float adark = 0;
 	if(1 - _darkness>0.5){
 		adark = 1 - _darkness;
