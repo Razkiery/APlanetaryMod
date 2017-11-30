@@ -1,4 +1,4 @@
-#include "../base.shader"
+#include "./Data/base.shader"
 
 VERT_OUTPUT vert(in VERT_INPUT input)
 {
@@ -23,6 +23,11 @@ float maxOf(float4 t)
 	float ta = max(max(t.x, t.y), t.z);
 	return ta;
 }
+float minOf(float4 t)
+{
+	float ta = min(min(t.x, t.y), t.z);
+	return ta;
+}
 float3 norm(float3 t)
 {
 	float ta = sqrt(t.x*t.x+ t.y*t.y + t.z*t.z);
@@ -30,6 +35,27 @@ float3 norm(float3 t)
 }
 float cub(float t){
 	return t*t*t;
+}
+
+float3 hsl(in float4 col){
+	float maxe = maxOf(col);
+	float mine = minOf(col);
+	float f = maxe-mine;
+	float hue;
+	if(col.x == maxe){
+		hue= 60*((col.g-col.b)/f);
+	}else if(col.y == maxe){
+		hue= 60*(2+(col.b-col.r)/f);
+	}else{
+		hue= 60*(4+(col.r-col.g)/f);
+	}
+	hue = (hue+360.0)%360.0;
+	
+	return float3(hue,f/(1-abs((maxe+mine)-1.0)),(maxe+mine)/2.0);
+	
+}
+bool between(float x,float mine,float maxe){
+	return x>mine && x<maxe;
 }
 
 
@@ -80,8 +106,10 @@ PIX_OUTPUT pix(in VERT_OUTPUT input) : SV_TARGET
 	float alpha = ret.a;
 	float dim = max(0,dot(_lightNormal, nrml))*2;
 	float dim2 = max(0,dot(float3(0,0,0.8), Nt))*5;
+	float3 bnrml = nrml;
 	if(!clouds){
-		bumpnormal = float3(rig - hmid + (hmid-lef),0.12,bot - hmid + (hmid-top));
+	//,
+		bumpnormal = float3(bot - hmid + (hmid-top),0.12,rig - hmid + (hmid-lef));
 		
 	}else{
 		bumpnormal = float3(rig - hmid + (hmid-lef),0.7,bot - hmid + (hmid-top));
@@ -96,15 +124,21 @@ PIX_OUTPUT pix(in VERT_OUTPUT input) : SV_TARGET
 	if(1 - _darkness>0.5){
 		adark = 1 - _darkness;
 	}
-	float crescentness = cub(max(1,2*(dot(-_lightNormal, float3(1,0,0)))));
+	float crescentness = cub(max(1,2*(dot(-_lightNormal, float3(0,1,0)))));
 	
-	float diffuseFactor = lerp(adark, 1, (dot(-_lightNormal, nrml))*crescentness - dim);			
+	float diffuseFactor = lerp(adark, 1, (dot(-_lightNormal, nrml)) - dim);			
 	//diffuseFactor*=crescentness;
 	//diffuseFactor += min(max(adark, 2*(0.22+dot(float3(0.8,0,0), nrml)- dim2)),0.2);;
-	
-	ret.rgb*=(diffuseFactor);
+	float3 hslret = hsl(ret);
+	if(between(hslret.x,190,240)&&between(hslret.z*100,14,65)&&adark<0.01){
+		ret.rgb*=(diffuseFactor);
+		ret.rgb += cub(cub(max(0,dot(-_lightNormal, bnrml))));
+	}else{
+		ret.rgb*=(diffuseFactor);
+	}
 	//ret.rgb = nrml;
 	ret.a=alpha;
+	//ret.a-=crescentness/5.0;
 	//ret.rgb = bumpnormal;
 	return ret;
 }
