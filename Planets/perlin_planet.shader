@@ -72,9 +72,12 @@ PIX_OUTPUT pix(in VERT_OUTPUT input) : SV_TARGET
 	float width = sqrt(1 - input.uv.y * input.uv.y);
 	float iuvx = input.uv.x;
 	input.uv.x = (-acos(input.uv.x / width) / PI * 2 + 1);
-
+	float rotspeed = _rotSpeed;
+	if(abs(_rotSpeed)<0.03){
+		rotspeed = 0.03;
+	}
 	float2 uv = float2(
-		(input.uv.x + 1) / 4 + _planetTime * _rotSpeed,
+		(input.uv.x + 1) / 4 + _planetTime * rotspeed,
 		(input.uv.y + 1) / 2);
 
 	float4 ret = _texture.Sample(_texture_SS, uv);
@@ -124,13 +127,18 @@ PIX_OUTPUT pix(in VERT_OUTPUT input) : SV_TARGET
 	if(1 - _darkness>0.5){
 		adark = 1 - _darkness;
 	}
+	if(_darkness<0){
+		nrml=-bnrml;
+		dim = 0;
+		adark = 1 + _darkness;
+	}
 	float crescentness = cub(max(1,2*(dot(-_lightNormal, float3(0,1,0)))));
 	
 	float diffuseFactor = lerp(adark, 1, (dot(-_lightNormal, nrml)) - dim);			
 	//diffuseFactor*=crescentness;
 	//diffuseFactor += min(max(adark, 2*(0.22+dot(float3(0.8,0,0), nrml)- dim2)),0.2);;
 	float3 hslret = hsl(ret);
-	if(between(hslret.x,190,240)&&between(hslret.z*100,14,65)&&adark<0.01){
+	if(between(hslret.x,190,240)&&between(hslret.z*100,14,65)&&between(hslret.y*100,10,200)&&adark<0.01){
 		ret.rgb*=(diffuseFactor);
 		ret.rgb += cub(cub(max(0,dot(-_lightNormal, bnrml))));
 	}else{
